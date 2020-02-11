@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.ViewBtn = new System.Windows.Forms.Button();
+            this.TestButton = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button2
+            // ViewBtn
             // 
-            this.button2.Location = new System.Drawing.Point(12, 56);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 39);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "View a pdf";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ViewBtn.Location = new System.Drawing.Point(12, 56);
+            this.ViewBtn.Name = "ViewBtn";
+            this.ViewBtn.Size = new System.Drawing.Size(152, 39);
+            this.ViewBtn.TabIndex = 1;
+            this.ViewBtn.Text = "View a pdf";
+            this.ViewBtn.UseVisualStyleBackColor = true;
+            this.ViewBtn.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // TestButton
             // 
-            this.button3.Location = new System.Drawing.Point(12, 304);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(152, 39);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Pre/Post tests";
-            this.button3.UseVisualStyleBackColor = true;
+            this.TestButton.Location = new System.Drawing.Point(12, 124);
+            this.TestButton.Name = "TestButton";
+            this.TestButton.Size = new System.Drawing.Size(152, 39);
+            this.TestButton.TabIndex = 2;
+            this.TestButton.Text = "Pre/Post tests";
+            this.TestButton.UseVisualStyleBackColor = true;
+            this.TestButton.Click += new System.EventHandler(this.button3_Click);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(12, 173);
+            this.button5.Location = new System.Drawing.Point(427, 170);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(152, 39);
             this.button5.TabIndex = 4;
@@ -67,8 +68,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.TestButton);
+            this.Controls.Add(this.ViewBtn);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -77,8 +78,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button ViewBtn;
+        private System.Windows.Forms.Button TestButton;
         private System.Windows.Forms.Button button5;
     }
 }
