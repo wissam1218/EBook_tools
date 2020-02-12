@@ -27,5 +27,11 @@ namespace EBook_tools
             preTest pre = new preTest();
             pre.Show();
         }
+
+        private void pstBtn_Click(object sender, EventArgs e)
+        {
+            postTest post = new postTest();
+            post.Show();
+        }
     }
 }

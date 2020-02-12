@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
+            this.pstBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -41,11 +42,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pstBtn
+            // 
+            this.pstBtn.Location = new System.Drawing.Point(551, 38);
+            this.pstBtn.Name = "pstBtn";
+            this.pstBtn.Size = new System.Drawing.Size(195, 41);
+            this.pstBtn.TabIndex = 1;
+            this.pstBtn.Text = "Create a post-test";
+            this.pstBtn.UseVisualStyleBackColor = true;
+            this.pstBtn.Click += new System.EventHandler(this.pstBtn_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pstBtn);
             this.Controls.Add(this.button1);
             this.Name = "Form2";
             this.Text = "Form2";
@@ -57,5 +69,6 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button pstBtn;
     }
 }

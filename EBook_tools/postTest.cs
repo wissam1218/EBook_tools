@@ -1,42 +1,42 @@
-﻿using System;
+﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using iTextSharp;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
-using System.Threading;
 
 namespace EBook_tools
 {
-    public partial class preTest : Form
+    public partial class postTest : Form
     {
-        string strPath = Environment.GetFolderPath(
-                         System.Environment.SpecialFolder.DesktopDirectory);
-
         public static int count = 1;
         public static Document pdoc = new Document(PageSize.A4, 20f, 20f, 30f, 30f);
         public static PdfWriter pwriter =
                     PdfWriter.GetInstance
-                    (pdoc, new FileStream("C:/Users/Sam_Ham/Desktop/pre.pdf", FileMode.Create));
-        // path: 
-        public preTest()
+                    (pdoc, new FileStream("C:/Users/Sam_Ham/Desktop/post.pdf", FileMode.Create));
+
+        public postTest()
         {
             InitializeComponent();
+           
             pdoc.Open();
-            Paragraph p = new Paragraph("PRE-TEST\r\n");
-            p.Alignment = 1;  //aligns to center
+            Paragraph p = new Paragraph("POST-TEST\r\n");
+            p.Alignment = 1;  
             pdoc.Add(p);
-            // pdoc.Add(new Paragraph("PRETEST\r\n"));
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addBtn_Click(object sender, EventArgs e)
         {
             pdoc.Open();
             pdoc.Add(new Paragraph("Question #" + count));
@@ -45,7 +45,7 @@ namespace EBook_tools
             pdoc.Add(new Paragraph(this.bBox.Text.Trim()));
             pdoc.Add(new Paragraph(this.cBox.Text.Trim()));
             pdoc.Add(new Paragraph(this.dBox.Text.Trim()));
- 
+
             pdoc.Add(new Paragraph("ANSWER: " + this.ansBox.Text.Trim()));
             pdoc.Add(new Paragraph("~~~~~~~~~~~~~~~~~~~"));
             qBox.Clear();
@@ -57,7 +57,7 @@ namespace EBook_tools
             count++;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buildBtn_Click(object sender, EventArgs e)
         {
             pdoc.Close();
         }

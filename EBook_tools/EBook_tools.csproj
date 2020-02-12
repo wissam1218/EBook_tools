@@ -67,6 +67,12 @@
     <Compile Include="PDFView.Designer.cs">
       <DependentUpon>PDFView.cs</DependentUpon>
     </Compile>
+    <Compile Include="postTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="postTest.Designer.cs">
+      <DependentUpon>postTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="preTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PDFView.resx">
       <DependentUpon>PDFView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="postTest.resx">
+      <DependentUpon>postTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="preTest.resx">
       <DependentUpon>preTest.cs</DependentUpon>

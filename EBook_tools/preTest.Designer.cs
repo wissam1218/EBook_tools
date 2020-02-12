@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ansBox = new System.Windows.Forms.TextBox();
             this.dBox = new System.Windows.Forms.TextBox();
             this.cBox = new System.Windows.Forms.TextBox();
             this.bBox = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ansBox = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +76,13 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // ansBox
+            // 
+            this.ansBox.Location = new System.Drawing.Point(133, 346);
+            this.ansBox.Name = "ansBox";
+            this.ansBox.Size = new System.Drawing.Size(421, 26);
+            this.ansBox.TabIndex = 19;
             // 
             // dBox
             // 
@@ -114,17 +121,17 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(581, 398);
+            this.button2.Location = new System.Drawing.Point(610, 391);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(160, 29);
             this.button2.TabIndex = 13;
-            this.button2.Text = "Build my PDF";
+            this.button2.Text = "&Build my PDF";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(666, 217);
+            this.button1.Location = new System.Drawing.Point(695, 267);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 36);
             this.button1.TabIndex = 12;
@@ -185,13 +192,6 @@
             this.label1.Size = new System.Drawing.Size(73, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Question";
-            // 
-            // ansBox
-            // 
-            this.ansBox.Location = new System.Drawing.Point(133, 346);
-            this.ansBox.Name = "ansBox";
-            this.ansBox.Size = new System.Drawing.Size(421, 26);
-            this.ansBox.TabIndex = 19;
             // 
             // preTest
             // 
