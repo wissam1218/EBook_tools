@@ -16,7 +16,7 @@ namespace EBook_tools
     public partial class postTest : Form
     {
         public static int count = 1;
-        public static Document pdoc = new Document(PageSize.A4, 20f, 20f, 30f, 30f);
+        public static Document pdoc = new Document();
         public static PdfWriter pwriter =
                     PdfWriter.GetInstance
                     (pdoc, new FileStream("C:/Users/Sam_Ham/Desktop/post.pdf", FileMode.Create));
@@ -37,8 +37,9 @@ namespace EBook_tools
         }
 
         private void addBtn_Click(object sender, EventArgs e)
-        {
+        { 
             pdoc.Open();
+            
             pdoc.Add(new Paragraph("Question #" + count));
             pdoc.Add(new Paragraph(this.qBox.Text.Trim()));
             pdoc.Add(new Paragraph(this.aBox.Text.Trim()));
@@ -48,6 +49,10 @@ namespace EBook_tools
 
             pdoc.Add(new Paragraph("ANSWER: " + this.ansBox.Text.Trim()));
             pdoc.Add(new Paragraph("~~~~~~~~~~~~~~~~~~~"));
+            if (count < 5)
+            {
+                pdoc.NewPage();
+            }
             qBox.Clear();
             aBox.Clear();
             bBox.Clear();
@@ -59,7 +64,19 @@ namespace EBook_tools
 
         private void buildBtn_Click(object sender, EventArgs e)
         {
+           
+            
             pdoc.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

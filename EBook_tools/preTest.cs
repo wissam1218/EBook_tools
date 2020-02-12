@@ -48,6 +48,10 @@ namespace EBook_tools
  
             pdoc.Add(new Paragraph("ANSWER: " + this.ansBox.Text.Trim()));
             pdoc.Add(new Paragraph("~~~~~~~~~~~~~~~~~~~"));
+            if (count < 5)
+            {
+                pdoc.NewPage();
+            }
             qBox.Clear();
             aBox.Clear();
             bBox.Clear();

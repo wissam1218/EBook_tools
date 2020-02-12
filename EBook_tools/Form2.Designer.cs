@@ -34,7 +34,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 38);
+            this.button1.Location = new System.Drawing.Point(195, 204);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(195, 41);
             this.button1.TabIndex = 0;
@@ -44,7 +44,7 @@
             // 
             // pstBtn
             // 
-            this.pstBtn.Location = new System.Drawing.Point(551, 38);
+            this.pstBtn.Location = new System.Drawing.Point(396, 204);
             this.pstBtn.Name = "pstBtn";
             this.pstBtn.Size = new System.Drawing.Size(195, 41);
             this.pstBtn.TabIndex = 1;
