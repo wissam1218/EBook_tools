@@ -16,43 +16,29 @@ namespace EBook_tools
     public partial class postTest : Form
     {
         public static int count = 1;
-        public static Document pdoc = new Document();
-        public static PdfWriter pwriter =
-                    PdfWriter.GetInstance
-                    (pdoc, new FileStream("C:/Users/Sam_Ham/Desktop/post.pdf", FileMode.Create));
+        TextWriter tw = new StreamWriter("C:/Users/Sam_Ham/Desktop/postTest.txt", true);
 
         public postTest()
         {
             InitializeComponent();
-           
-            pdoc.Open();
-            Paragraph p = new Paragraph("POST-TEST\r\n");
-            p.Alignment = 1;  
-            pdoc.Add(p);
+            tw.WriteLine("POST-TEST\r\n");
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
-
+            
         }
 
         private void addBtn_Click(object sender, EventArgs e)
-        { 
-            pdoc.Open();
-            
-            pdoc.Add(new Paragraph("Question #" + count));
-            pdoc.Add(new Paragraph(this.qBox.Text.Trim()));
-            pdoc.Add(new Paragraph(this.aBox.Text.Trim()));
-            pdoc.Add(new Paragraph(this.bBox.Text.Trim()));
-            pdoc.Add(new Paragraph(this.cBox.Text.Trim()));
-            pdoc.Add(new Paragraph(this.dBox.Text.Trim()));
-
-            pdoc.Add(new Paragraph("ANSWER: " + this.ansBox.Text.Trim()));
-            pdoc.Add(new Paragraph("~~~~~~~~~~~~~~~~~~~"));
-            if (count < 5)
-            {
-                pdoc.NewPage();
-            }
+        {
+            tw.WriteLine("Question #" + count);
+            tw.WriteLine(this.qBox.Text);
+            tw.WriteLine(this.aBox.Text);
+            tw.WriteLine(this.bBox.Text);
+            tw.WriteLine(this.cBox.Text);
+            tw.WriteLine(this.dBox.Text);
+            tw.WriteLine("ANSWER: " + this.ansBox.Text);
+            tw.WriteLine("~~~~~~~~~~~~~~~");
             qBox.Clear();
             aBox.Clear();
             bBox.Clear();
@@ -66,7 +52,7 @@ namespace EBook_tools
         {
            
             
-            pdoc.Close();
+            tw.Close();
         }
 
         private void label3_Click(object sender, EventArgs e)
