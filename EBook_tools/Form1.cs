@@ -20,6 +20,9 @@ namespace EBook_tools
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+
+
             PDFView pdf = new PDFView();
             pdf.Show();
         }

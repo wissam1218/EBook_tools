@@ -36,14 +36,12 @@
             // 
             // pdf
             // 
-            this.pdf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pdf.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pdf.Enabled = true;
-            this.pdf.Location = new System.Drawing.Point(12, 77);
+            this.pdf.Location = new System.Drawing.Point(0, 0);
             this.pdf.Name = "pdf";
             this.pdf.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdf.OcxState")));
-            this.pdf.Size = new System.Drawing.Size(434, 370);
+            this.pdf.Size = new System.Drawing.Size(458, 459);
             this.pdf.TabIndex = 0;
             this.pdf.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
             // 
