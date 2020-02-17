@@ -29,7 +29,7 @@ namespace EBook_tools
             
         }
 
-        private void addBtn_Click(object sender, EventArgs e)
+        public void addBtn_Click(object sender, EventArgs e)
         {
             tw.WriteLine("Question #" + count);
             tw.WriteLine(this.qBox.Text);
