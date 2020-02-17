@@ -110,6 +110,7 @@
             this.qBox.Name = "qBox";
             this.qBox.Size = new System.Drawing.Size(420, 26);
             this.qBox.TabIndex = 14;
+            this.qBox.TextChanged += new System.EventHandler(this.qBox_TextChanged);
             // 
             // button2
             // 

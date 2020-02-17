@@ -1,5 +1,4 @@
-﻿using iTextSharp.text;
-using iTextSharp.text.pdf;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,12 +21,12 @@ namespace EBook_tools
         {
             InitializeComponent();
             tw.WriteLine("POST-TEST\r\n");
-            qBox.Text = "what is question #: " + count.ToString();
-            aBox.Text = "answer 1";
-            bBox.Text = "answer 2";
-            cBox.Text = "answer 3";
-            dBox.Text = "answer 4";
-            ansBox.Text = "actual answer";
+            qBox.Text = "Enter question here";
+            aBox.Text = "Enter an answer here";
+            bBox.Text = "Enter an answer here";
+            cBox.Text = "Enter an answer here";
+            dBox.Text = "Enter an answer here";
+            ansBox.Text = "Enter the correct answer here";
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -52,12 +51,12 @@ namespace EBook_tools
             dBox.Clear();
             ansBox.Clear();
             
-            qBox.Text = "what is question #: " + count.ToString();
-            aBox.Text = "answer 1";
-            bBox.Text = "answer 2";
-            cBox.Text = "answer 3";
-            dBox.Text = "answer 4";
-            ansBox.Text = "actual answer";
+            qBox.Text = "What is question #: " + (count+1).ToString();
+            aBox.Text = "Answer 1";
+            bBox.Text = "Answer 2";
+            cBox.Text = "Answer 3";
+            dBox.Text = "Answer 4";
+            ansBox.Text = "Actual answer";
             count++;
         }
 

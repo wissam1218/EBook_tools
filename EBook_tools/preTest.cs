@@ -8,9 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using iTextSharp;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
 using System.Threading;
 
 namespace EBook_tools
@@ -22,14 +19,15 @@ namespace EBook_tools
         
 public preTest()
         {
+       
             InitializeComponent();
             tw.WriteLine("PRE-TEST\r\n");
-            qBox.Text = "what is question #: " + count.ToString();
-            aBox.Text = "answer 1";
-            bBox.Text = "answer 2";
-            cBox.Text = "answer 3";
-            dBox.Text = "answer 4";
-            ansBox.Text = "actual answer";
+            qBox.Text = "Enter question here";
+            aBox.Text = "Answer 1";
+            bBox.Text = "Answer 2";
+            cBox.Text = "Answer 3";
+            dBox.Text = "Answer 4";
+            ansBox.Text = "Actual answer";
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -49,18 +47,23 @@ public preTest()
             dBox.Clear();
             ansBox.Clear();
 
-            qBox.Text = "what is question #: " + count.ToString();
-            aBox.Text = "answer 1";
-            bBox.Text = "answer 2";
-            cBox.Text = "answer 3";
-            dBox.Text = "answer 4";
-            ansBox.Text = "actual answer";
+            qBox.Text = "What is question #: " + (count+1).ToString();
+            aBox.Text = "Answer 1";
+            bBox.Text = "Answer 2";
+            cBox.Text = "Answer 3";
+            dBox.Text = "Answer 4";
+            ansBox.Text = "Actual answer";
             count++;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             tw.Close();
+        }
+
+        private void qBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
