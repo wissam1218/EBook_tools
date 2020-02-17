@@ -72,9 +72,9 @@
             // 
             // buildBtn
             // 
-            this.buildBtn.Location = new System.Drawing.Point(626, 384);
+            this.buildBtn.Location = new System.Drawing.Point(626, 371);
             this.buildBtn.Name = "buildBtn";
-            this.buildBtn.Size = new System.Drawing.Size(154, 33);
+            this.buildBtn.Size = new System.Drawing.Size(154, 46);
             this.buildBtn.TabIndex = 13;
             this.buildBtn.Text = "&Build my Test";
             this.buildBtn.UseVisualStyleBackColor = true;
@@ -82,9 +82,9 @@
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(626, 216);
+            this.addBtn.Location = new System.Drawing.Point(626, 210);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(154, 35);
+            this.addBtn.Size = new System.Drawing.Size(154, 41);
             this.addBtn.TabIndex = 12;
             this.addBtn.Text = "Add Question";
             this.addBtn.UseVisualStyleBackColor = true;

@@ -43,7 +43,7 @@
             this.pdf.Location = new System.Drawing.Point(12, 77);
             this.pdf.Name = "pdf";
             this.pdf.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdf.OcxState")));
-            this.pdf.Size = new System.Drawing.Size(288, 288);
+            this.pdf.Size = new System.Drawing.Size(434, 370);
             this.pdf.TabIndex = 0;
             this.pdf.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
             // 

@@ -30,6 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.pstBtn = new System.Windows.Forms.Button();
+            this.txtButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -52,11 +53,22 @@
             this.pstBtn.UseVisualStyleBackColor = true;
             this.pstBtn.Click += new System.EventHandler(this.pstBtn_Click);
             // 
+            // txtButton
+            // 
+            this.txtButton.Location = new System.Drawing.Point(305, 397);
+            this.txtButton.Name = "txtButton";
+            this.txtButton.Size = new System.Drawing.Size(195, 41);
+            this.txtButton.TabIndex = 2;
+            this.txtButton.Text = "&Open a TXT file";
+            this.txtButton.UseVisualStyleBackColor = true;
+            this.txtButton.Click += new System.EventHandler(this.txtButton_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtButton);
             this.Controls.Add(this.pstBtn);
             this.Controls.Add(this.button1);
             this.Name = "Form2";
@@ -70,5 +82,6 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button pstBtn;
+        private System.Windows.Forms.Button txtButton;
     }
 }

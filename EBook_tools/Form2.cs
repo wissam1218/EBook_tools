@@ -33,5 +33,12 @@ namespace EBook_tools
             postTest post = new postTest();
             post.Show();
         }
+
+        private void txtButton_Click(object sender, EventArgs e)
+        {
+            TXTreader txt = new TXTreader();
+            txt.Show();
+
+        }
     }
 }

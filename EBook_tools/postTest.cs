@@ -22,6 +22,12 @@ namespace EBook_tools
         {
             InitializeComponent();
             tw.WriteLine("POST-TEST\r\n");
+            qBox.Text = "what is question #: " + count.ToString();
+            aBox.Text = "answer 1";
+            bBox.Text = "answer 2";
+            cBox.Text = "answer 3";
+            dBox.Text = "answer 4";
+            ansBox.Text = "actual answer";
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -45,6 +51,13 @@ namespace EBook_tools
             cBox.Clear();
             dBox.Clear();
             ansBox.Clear();
+            
+            qBox.Text = "what is question #: " + count.ToString();
+            aBox.Text = "answer 1";
+            bBox.Text = "answer 2";
+            cBox.Text = "answer 3";
+            dBox.Text = "answer 4";
+            ansBox.Text = "actual answer";
             count++;
         }
 

@@ -24,6 +24,12 @@ public preTest()
         {
             InitializeComponent();
             tw.WriteLine("PRE-TEST\r\n");
+            qBox.Text = "what is question #: " + count.ToString();
+            aBox.Text = "answer 1";
+            bBox.Text = "answer 2";
+            cBox.Text = "answer 3";
+            dBox.Text = "answer 4";
+            ansBox.Text = "actual answer";
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -42,6 +48,13 @@ public preTest()
             cBox.Clear();
             dBox.Clear();
             ansBox.Clear();
+
+            qBox.Text = "what is question #: " + count.ToString();
+            aBox.Text = "answer 1";
+            bBox.Text = "answer 2";
+            cBox.Text = "answer 3";
+            dBox.Text = "answer 4";
+            ansBox.Text = "actual answer";
             count++;
         }
 
