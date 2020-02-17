@@ -15,7 +15,7 @@ namespace EBook_tools
     public partial class postTest : Form
     {
         public static int count = 1;
-        TextWriter tw = new StreamWriter("C:/Users/Sam_Ham/Desktop/postTest.txt", true);
+        TextWriter tw = new StreamWriter("postTest.txt", true);
 
         public postTest()
         {
