@@ -17,9 +17,8 @@ namespace EBook_tools
         public static int count = 1;
        TextWriter tw = new StreamWriter("C:/Users/Sam_Ham/Desktop/preTest.txt", true);
         
-public preTest()
+        public preTest()
         {
-       
             InitializeComponent();
             tw.WriteLine("PRE-TEST\r\n");
             qBox.Text = "Enter question here";
@@ -58,7 +57,6 @@ public preTest()
 
         private void button2_Click(object sender, EventArgs e)
         {
-            tw.Close();
         }
 
         private void qBox_TextChanged(object sender, EventArgs e)
@@ -68,6 +66,12 @@ public preTest()
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
+
+        }
+
+        private void preTest_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            tw.Close();
 
         }
     }

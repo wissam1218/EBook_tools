@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buildBtn = new System.Windows.Forms.Button();
             this.addBtn = new System.Windows.Forms.Button();
             this.ansBox = new System.Windows.Forms.TextBox();
             this.dBox = new System.Windows.Forms.TextBox();
@@ -48,7 +47,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.buildBtn);
             this.groupBox1.Controls.Add(this.addBtn);
             this.groupBox1.Controls.Add(this.ansBox);
             this.groupBox1.Controls.Add(this.dBox);
@@ -69,16 +67,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // buildBtn
-            // 
-            this.buildBtn.Location = new System.Drawing.Point(626, 371);
-            this.buildBtn.Name = "buildBtn";
-            this.buildBtn.Size = new System.Drawing.Size(154, 46);
-            this.buildBtn.TabIndex = 13;
-            this.buildBtn.Text = "&Build my Test";
-            this.buildBtn.UseVisualStyleBackColor = true;
-            this.buildBtn.Click += new System.EventHandler(this.buildBtn_Click);
             // 
             // addBtn
             // 
@@ -217,7 +205,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox qBox;
-        private System.Windows.Forms.Button buildBtn;
         private System.Windows.Forms.Button addBtn;
     }
 }

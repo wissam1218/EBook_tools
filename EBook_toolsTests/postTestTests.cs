@@ -15,7 +15,7 @@ namespace EBook_tools.Tests
         public void postTestTest()
         {
             postTest post = new postTest();
-            addBtn_Click add = new addBtn_Click();
+            post
 
 
             String actual = ;

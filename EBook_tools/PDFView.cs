@@ -14,8 +14,6 @@ namespace EBook_tools
     {
         public PDFView()
         {
-            
-
             InitializeComponent();
         }
 
