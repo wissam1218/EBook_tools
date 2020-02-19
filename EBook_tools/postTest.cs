@@ -14,8 +14,9 @@ namespace EBook_tools
 {
     public partial class postTest : Form
     {
+        
         public static int count = 1;
-        TextWriter tw = new StreamWriter("tests/postTest.txt", true);
+        TextWriter tw = new StreamWriter("C:/Users/Sam_Ham/Desktop/postTest.txt", true);
 
         public postTest()
         {
@@ -62,6 +63,7 @@ namespace EBook_tools
 
         private void buildBtn_Click(object sender, EventArgs e)
         {
+
            
            
         }
@@ -78,6 +80,11 @@ namespace EBook_tools
         private void postTest_FormClosed(object sender, FormClosedEventArgs e)
         {
             tw.Close();
+
+        }
+
+        private void postTest_Load(object sender, EventArgs e)
+        {
 
         }
     }

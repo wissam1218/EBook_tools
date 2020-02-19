@@ -184,6 +184,8 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "postTest";
             this.Text = "postTest";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.postTest_FormClosed);
+            this.Load += new System.EventHandler(this.postTest_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
