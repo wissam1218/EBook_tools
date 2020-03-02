@@ -20,7 +20,6 @@ namespace EBook_tools
         public preTest()
         {
             InitializeComponent();
-            tw.WriteLine("PRE-TEST\r\n");
             qBox.Text = "Enter question here";
             aBox.Text = "Enter an answer here";
             bBox.Text = "Enter an answer here";
@@ -31,14 +30,14 @@ namespace EBook_tools
 
         private void button1_Click_1(object sender, EventArgs e)
         { 
-            tw.WriteLine("Question #"+count);
-            tw.WriteLine(this.qBox.Text);
-            tw.WriteLine(this.aBox.Text);
-            tw.WriteLine(this.bBox.Text);
-            tw.WriteLine(this.cBox.Text);
-            tw.WriteLine(this.dBox.Text);
-            tw.WriteLine("ANSWER: "+this.ansBox.Text);
-            tw.WriteLine("~~~~~~~~~~~~~~~");
+            //tw.WriteLine("Question #"+count);
+            tw.WriteLine("$"+this.qBox.Text);
+            tw.WriteLine("&"+this.aBox.Text);
+            tw.WriteLine("!"+this.bBox.Text);
+            tw.WriteLine("*"+this.cBox.Text);
+            tw.WriteLine("@"+this.dBox.Text);
+            tw.WriteLine("."+this.ansBox.Text);
+          
             qBox.Clear();
             aBox.Clear();
             bBox.Clear();

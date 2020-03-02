@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,12 +19,11 @@ namespace EBook_tools
 
         public postTest()
         {
-            InitializeComponent();
-            tw.WriteLine("POST-TEST\r\n");
+            InitializeComponent();        
             qBox.Text = "Enter question here";
             aBox.Text = "Enter an answer here";
             bBox.Text = "Enter an answer here";
-            cBox.Text = "Enter an answer here";
+            cBox.Text = "Enter an answer here" ;
             dBox.Text = "Enter an answer here";
             ansBox.Text = "Enter the correct answer here";
         }
@@ -37,14 +35,12 @@ namespace EBook_tools
 
         public void addBtn_Click(object sender, EventArgs e)
         {
-            tw.WriteLine("Question #" + count);
-            tw.WriteLine(this.qBox.Text);
-            tw.WriteLine(this.aBox.Text);
-            tw.WriteLine(this.bBox.Text);
-            tw.WriteLine(this.cBox.Text);
-            tw.WriteLine(this.dBox.Text);
-            tw.WriteLine("ANSWER: " + this.ansBox.Text);
-            tw.WriteLine("~~~~~~~~~~~~~~~");
+            tw.WriteLine("$" + this.qBox.Text);
+            tw.WriteLine("&" + this.aBox.Text);
+            tw.WriteLine("!" + this.bBox.Text);
+            tw.WriteLine("*" + this.cBox.Text);
+            tw.WriteLine("@" + this.dBox.Text);
+            tw.WriteLine("." + this.ansBox.Text);
             qBox.Clear();
             aBox.Clear();
             bBox.Clear();
