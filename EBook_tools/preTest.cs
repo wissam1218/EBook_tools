@@ -15,7 +15,7 @@ namespace EBook_tools
     public partial class preTest : Form
     {
         public static int count = 1;
-       TextWriter tw = new StreamWriter("C:/Users/Sam_Ham/Desktop/preTest.txt", true);
+       TextWriter tw = new StreamWriter("preTest.txt", true);
         
 public preTest()
         {

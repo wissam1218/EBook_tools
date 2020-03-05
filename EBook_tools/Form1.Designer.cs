@@ -1,6 +1,6 @@
 ﻿namespace EBook_tools
 {
-    partial class Form1
+    partial class LessonCreator
     {
         /// <summary>
         /// Required designer variable.
@@ -35,9 +35,10 @@
             // 
             // ViewBtn
             // 
-            this.ViewBtn.Location = new System.Drawing.Point(12, 56);
+            this.ViewBtn.Location = new System.Drawing.Point(387, 126);
+            this.ViewBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ViewBtn.Name = "ViewBtn";
-            this.ViewBtn.Size = new System.Drawing.Size(152, 39);
+            this.ViewBtn.Size = new System.Drawing.Size(101, 25);
             this.ViewBtn.TabIndex = 1;
             this.ViewBtn.Text = "View a pdf";
             this.ViewBtn.UseVisualStyleBackColor = true;
@@ -45,9 +46,10 @@
             // 
             // TestButton
             // 
-            this.TestButton.Location = new System.Drawing.Point(12, 124);
+            this.TestButton.Location = new System.Drawing.Point(83, 126);
+            this.TestButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TestButton.Name = "TestButton";
-            this.TestButton.Size = new System.Drawing.Size(152, 39);
+            this.TestButton.Size = new System.Drawing.Size(101, 25);
             this.TestButton.TabIndex = 2;
             this.TestButton.Text = "Pre/Post tests";
             this.TestButton.UseVisualStyleBackColor = true;
@@ -55,23 +57,26 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(427, 170);
+            this.button5.Location = new System.Drawing.Point(240, 126);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(152, 39);
+            this.button5.Size = new System.Drawing.Size(101, 25);
             this.button5.TabIndex = 4;
             this.button5.Text = "Edit PDF";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // LessonCreator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.TestButton);
             this.Controls.Add(this.ViewBtn);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "LessonCreator";
+            this.Text = "Lesson Creator";
+            this.Load += new System.EventHandler(this.LessonCreator_Load);
             this.ResumeLayout(false);
 
         }

@@ -58,12 +58,11 @@ namespace EBook_tools
             dBox.Text = "Answer 4";
             ansBox.Text = "Actual answer";
             count++;
+
         }
 
         private void buildBtn_Click(object sender, EventArgs e)
         {
-           
-            
             tw.Close();
         }
 

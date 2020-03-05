@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EBook_tools
 {
-    public partial class Form2 : Form
+    public partial class AddToLesson : Form
     {
-        public Form2()
+        public AddToLesson()
         {
             InitializeComponent();
         }

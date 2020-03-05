@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EBook_tools
 {
-    public partial class Form1 : Form
+    public partial class LessonCreator : Form
     {
-        public Form1()
+        public LessonCreator()
         {
             
             InitializeComponent();
@@ -28,8 +28,18 @@ namespace EBook_tools
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            Form2 form = new Form2();
+            AddToLesson form = new AddToLesson();
             form.Show();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LessonCreator_Load(object sender, EventArgs e)
+        {
 
         }
     }

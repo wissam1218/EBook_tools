@@ -1,6 +1,6 @@
 ﻿namespace EBook_tools
 {
-    partial class Form2
+    partial class AddToLesson
     {
         /// <summary>
         /// Required designer variable.
@@ -35,9 +35,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(195, 204);
+            this.button1.Location = new System.Drawing.Point(130, 133);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 41);
+            this.button1.Size = new System.Drawing.Size(130, 27);
             this.button1.TabIndex = 0;
             this.button1.Text = "Create a pre-test";
             this.button1.UseVisualStyleBackColor = true;
@@ -45,9 +46,10 @@
             // 
             // pstBtn
             // 
-            this.pstBtn.Location = new System.Drawing.Point(396, 204);
+            this.pstBtn.Location = new System.Drawing.Point(264, 133);
+            this.pstBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pstBtn.Name = "pstBtn";
-            this.pstBtn.Size = new System.Drawing.Size(195, 41);
+            this.pstBtn.Size = new System.Drawing.Size(130, 27);
             this.pstBtn.TabIndex = 1;
             this.pstBtn.Text = "Create a post-test";
             this.pstBtn.UseVisualStyleBackColor = true;
@@ -55,24 +57,26 @@
             // 
             // txtButton
             // 
-            this.txtButton.Location = new System.Drawing.Point(305, 397);
+            this.txtButton.Location = new System.Drawing.Point(203, 258);
+            this.txtButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtButton.Name = "txtButton";
-            this.txtButton.Size = new System.Drawing.Size(195, 41);
+            this.txtButton.Size = new System.Drawing.Size(130, 27);
             this.txtButton.TabIndex = 2;
             this.txtButton.Text = "&Open a TXT file";
             this.txtButton.UseVisualStyleBackColor = true;
             this.txtButton.Click += new System.EventHandler(this.txtButton_Click);
             // 
-            // Form2
+            // AddToLesson
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.txtButton);
             this.Controls.Add(this.pstBtn);
             this.Controls.Add(this.button1);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "AddToLesson";
+            this.Text = "Add To Your Lesson";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
 
