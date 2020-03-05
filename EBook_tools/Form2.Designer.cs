@@ -28,53 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.pstBtn = new System.Windows.Forms.Button();
-            this.txtButton = new System.Windows.Forms.Button();
+            this.PreTestBtn = new System.Windows.Forms.Button();
+            this.PostTestBtn = new System.Windows.Forms.Button();
+            this.OpenTXTBtn = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // PreTestBtn
             // 
-            this.button1.Location = new System.Drawing.Point(130, 133);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 27);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Create a pre-test";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.PreTestBtn.Location = new System.Drawing.Point(130, 133);
+            this.PreTestBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.PreTestBtn.Name = "PreTestBtn";
+            this.PreTestBtn.Size = new System.Drawing.Size(130, 27);
+            this.PreTestBtn.TabIndex = 0;
+            this.PreTestBtn.Text = "Create A Pre Test";
+            this.PreTestBtn.UseVisualStyleBackColor = true;
+            this.PreTestBtn.Click += new System.EventHandler(this.PreTestBtn_Click);
             // 
-            // pstBtn
+            // PostTestBtn
             // 
-            this.pstBtn.Location = new System.Drawing.Point(264, 133);
-            this.pstBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pstBtn.Name = "pstBtn";
-            this.pstBtn.Size = new System.Drawing.Size(130, 27);
-            this.pstBtn.TabIndex = 1;
-            this.pstBtn.Text = "Create a post-test";
-            this.pstBtn.UseVisualStyleBackColor = true;
-            this.pstBtn.Click += new System.EventHandler(this.pstBtn_Click);
+            this.PostTestBtn.Location = new System.Drawing.Point(264, 133);
+            this.PostTestBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.PostTestBtn.Name = "PostTestBtn";
+            this.PostTestBtn.Size = new System.Drawing.Size(130, 27);
+            this.PostTestBtn.TabIndex = 1;
+            this.PostTestBtn.Text = "Create A Post Test";
+            this.PostTestBtn.UseVisualStyleBackColor = true;
+            this.PostTestBtn.Click += new System.EventHandler(this.PostTestBtn_Click);
             // 
-            // txtButton
+            // OpenTXTBtn
             // 
-            this.txtButton.Location = new System.Drawing.Point(203, 258);
-            this.txtButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtButton.Name = "txtButton";
-            this.txtButton.Size = new System.Drawing.Size(130, 27);
-            this.txtButton.TabIndex = 2;
-            this.txtButton.Text = "&Open a TXT file";
-            this.txtButton.UseVisualStyleBackColor = true;
-            this.txtButton.Click += new System.EventHandler(this.txtButton_Click);
+            this.OpenTXTBtn.Location = new System.Drawing.Point(203, 258);
+            this.OpenTXTBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.OpenTXTBtn.Name = "OpenTXTBtn";
+            this.OpenTXTBtn.Size = new System.Drawing.Size(130, 27);
+            this.OpenTXTBtn.TabIndex = 2;
+            this.OpenTXTBtn.Text = "&Open a TXT file";
+            this.OpenTXTBtn.UseVisualStyleBackColor = true;
+            this.OpenTXTBtn.Click += new System.EventHandler(this.OpenTXTBtn_Click);
+            // 
+            // BackBtn
+            // 
+            this.BackBtn.Location = new System.Drawing.Point(446, 257);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(75, 23);
+            this.BackBtn.TabIndex = 3;
+            this.BackBtn.Text = "Back";
+            this.BackBtn.UseVisualStyleBackColor = true;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // CreateTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 292);
-            this.Controls.Add(this.txtButton);
-            this.Controls.Add(this.pstBtn);
-            this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Controls.Add(this.BackBtn);
+            this.Controls.Add(this.OpenTXTBtn);
+            this.Controls.Add(this.PostTestBtn);
+            this.Controls.Add(this.PreTestBtn);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CreateTest";
             this.Text = "Create Test";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -84,8 +96,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button pstBtn;
-        private System.Windows.Forms.Button txtButton;
+        private System.Windows.Forms.Button PreTestBtn;
+        private System.Windows.Forms.Button PostTestBtn;
+        private System.Windows.Forms.Button OpenTXTBtn;
+        private System.Windows.Forms.Button BackBtn;
     }
 }

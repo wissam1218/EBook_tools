@@ -31,6 +31,7 @@
             this.ViewPDFBtn = new System.Windows.Forms.Button();
             this.TestButton = new System.Windows.Forms.Button();
             this.EditPDFBtn = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ViewPDFBtn
@@ -42,34 +43,46 @@
             this.ViewPDFBtn.TabIndex = 1;
             this.ViewPDFBtn.Text = "View a pdf";
             this.ViewPDFBtn.UseVisualStyleBackColor = true;
-            this.ViewPDFBtn.Click += new System.EventHandler(this.button2_Click);
+            this.ViewPDFBtn.Click += new System.EventHandler(this.ViewPDFBtn_Click);
             // 
             // TestButton
             // 
-            this.TestButton.Location = new System.Drawing.Point(79, 48);
+            this.TestButton.Location = new System.Drawing.Point(65, 126);
             this.TestButton.Margin = new System.Windows.Forms.Padding(2);
             this.TestButton.Name = "TestButton";
             this.TestButton.Size = new System.Drawing.Size(101, 25);
             this.TestButton.TabIndex = 2;
             this.TestButton.Text = "Pre/Post tests";
             this.TestButton.UseVisualStyleBackColor = true;
-            this.TestButton.Click += new System.EventHandler(this.button3_Click);
+            this.TestButton.Click += new System.EventHandler(this.TestBtn_Click);
             // 
             // EditPDFBtn
             // 
-            this.EditPDFBtn.Location = new System.Drawing.Point(240, 126);
+            this.EditPDFBtn.Location = new System.Drawing.Point(228, 126);
             this.EditPDFBtn.Margin = new System.Windows.Forms.Padding(2);
             this.EditPDFBtn.Name = "EditPDFBtn";
             this.EditPDFBtn.Size = new System.Drawing.Size(101, 25);
             this.EditPDFBtn.TabIndex = 4;
             this.EditPDFBtn.Text = "Edit PDF";
             this.EditPDFBtn.UseVisualStyleBackColor = true;
+            this.EditPDFBtn.Click += new System.EventHandler(this.EditPDFBtn_Click);
+            // 
+            // BackBtn
+            // 
+            this.BackBtn.Location = new System.Drawing.Point(446, 257);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(75, 23);
+            this.BackBtn.TabIndex = 5;
+            this.BackBtn.Text = "Back";
+            this.BackBtn.UseVisualStyleBackColor = true;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // LessonCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 292);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.EditPDFBtn);
             this.Controls.Add(this.TestButton);
             this.Controls.Add(this.ViewPDFBtn);
@@ -86,6 +99,7 @@
         private System.Windows.Forms.Button ViewPDFBtn;
         private System.Windows.Forms.Button TestButton;
         private System.Windows.Forms.Button EditPDFBtn;
+        private System.Windows.Forms.Button BackBtn;
     }
 }
 

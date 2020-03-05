@@ -76,7 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 265);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.ChooseCurric);
             this.Controls.Add(this.ChooseClassroom);
             this.Controls.Add(this.CreateCurric);

@@ -28,6 +28,7 @@ namespace EBook_tools
 
         private void CreateCurric_Click(object sender, EventArgs e)
         {
+            this.Hide();
             LessonCreator newCurric = new LessonCreator();
             newCurric.Show();
         }
