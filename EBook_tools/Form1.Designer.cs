@@ -36,7 +36,7 @@
             // ViewPDFBtn
             // 
             this.ViewPDFBtn.Location = new System.Drawing.Point(387, 126);
-            this.ViewPDFBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ViewPDFBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ViewPDFBtn.Name = "ViewPDFBtn";
             this.ViewPDFBtn.Size = new System.Drawing.Size(101, 25);
             this.ViewPDFBtn.TabIndex = 1;
@@ -46,8 +46,8 @@
             // 
             // TestButton
             // 
-            this.TestButton.Location = new System.Drawing.Point(83, 126);
-            this.TestButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TestButton.Location = new System.Drawing.Point(79, 48);
+            this.TestButton.Margin = new System.Windows.Forms.Padding(2);
             this.TestButton.Name = "TestButton";
             this.TestButton.Size = new System.Drawing.Size(101, 25);
             this.TestButton.TabIndex = 2;
@@ -58,7 +58,7 @@
             // EditPDFBtn
             // 
             this.EditPDFBtn.Location = new System.Drawing.Point(240, 126);
-            this.EditPDFBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditPDFBtn.Margin = new System.Windows.Forms.Padding(2);
             this.EditPDFBtn.Name = "EditPDFBtn";
             this.EditPDFBtn.Size = new System.Drawing.Size(101, 25);
             this.EditPDFBtn.TabIndex = 4;
@@ -73,7 +73,7 @@
             this.Controls.Add(this.EditPDFBtn);
             this.Controls.Add(this.TestButton);
             this.Controls.Add(this.ViewPDFBtn);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LessonCreator";
             this.Text = "Lesson Creator";
             this.Load += new System.EventHandler(this.LessonCreator_Load);
