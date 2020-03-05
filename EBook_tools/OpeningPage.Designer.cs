@@ -28,59 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CreateClass = new System.Windows.Forms.Button();
-            this.CreateCurric = new System.Windows.Forms.Button();
-            this.ChooseClassroom = new System.Windows.Forms.ComboBox();
-            this.ChooseCurric = new System.Windows.Forms.ComboBox();
+            this.chooseClassBtn = new System.Windows.Forms.Button();
+            this.chooseCurricBtn = new System.Windows.Forms.Button();
+            this.chooseClassCBox = new System.Windows.Forms.ComboBox();
+            this.chooseCurricCBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // CreateClass
+            // chooseClassBtn
             // 
-            this.CreateClass.Location = new System.Drawing.Point(87, 86);
-            this.CreateClass.Name = "CreateClass";
-            this.CreateClass.Size = new System.Drawing.Size(108, 23);
-            this.CreateClass.TabIndex = 0;
-            this.CreateClass.Text = "Create Classroom";
-            this.CreateClass.UseVisualStyleBackColor = true;
-            this.CreateClass.Click += new System.EventHandler(this.CreateClass_Click);
+            this.chooseClassBtn.Location = new System.Drawing.Point(87, 86);
+            this.chooseClassBtn.Name = "chooseClassBtn";
+            this.chooseClassBtn.Size = new System.Drawing.Size(108, 23);
+            this.chooseClassBtn.TabIndex = 0;
+            this.chooseClassBtn.Text = "Create Classroom";
+            this.chooseClassBtn.UseVisualStyleBackColor = true;
+            this.chooseClassBtn.Click += new System.EventHandler(this.chooseClassBtn_Click);
             // 
-            // CreateCurric
+            // chooseCurricBtn
             // 
-            this.CreateCurric.Location = new System.Drawing.Point(87, 132);
-            this.CreateCurric.Name = "CreateCurric";
-            this.CreateCurric.Size = new System.Drawing.Size(108, 23);
-            this.CreateCurric.TabIndex = 1;
-            this.CreateCurric.Text = "Create Curriculum";
-            this.CreateCurric.UseVisualStyleBackColor = true;
-            this.CreateCurric.Click += new System.EventHandler(this.CreateCurric_Click);
+            this.chooseCurricBtn.Location = new System.Drawing.Point(87, 132);
+            this.chooseCurricBtn.Name = "chooseCurricBtn";
+            this.chooseCurricBtn.Size = new System.Drawing.Size(108, 23);
+            this.chooseCurricBtn.TabIndex = 1;
+            this.chooseCurricBtn.Text = "Create Curriculum";
+            this.chooseCurricBtn.UseVisualStyleBackColor = true;
+            this.chooseCurricBtn.Click += new System.EventHandler(this.chooseCurricBtn_Click);
             // 
-            // ChooseClassroom
+            // chooseClassCBox
             // 
-            this.ChooseClassroom.FormattingEnabled = true;
-            this.ChooseClassroom.Location = new System.Drawing.Point(237, 88);
-            this.ChooseClassroom.Name = "ChooseClassroom";
-            this.ChooseClassroom.Size = new System.Drawing.Size(154, 21);
-            this.ChooseClassroom.TabIndex = 2;
-            this.ChooseClassroom.Text = "Open Existing Classroom";
+            this.chooseClassCBox.FormattingEnabled = true;
+            this.chooseClassCBox.Location = new System.Drawing.Point(237, 88);
+            this.chooseClassCBox.Name = "chooseClassCBox";
+            this.chooseClassCBox.Size = new System.Drawing.Size(154, 21);
+            this.chooseClassCBox.TabIndex = 2;
+            this.chooseClassCBox.Text = "Open Existing Classroom";
             // 
-            // ChooseCurric
+            // chooseCurricCBox
             // 
-            this.ChooseCurric.FormattingEnabled = true;
-            this.ChooseCurric.Location = new System.Drawing.Point(237, 134);
-            this.ChooseCurric.Name = "ChooseCurric";
-            this.ChooseCurric.Size = new System.Drawing.Size(154, 21);
-            this.ChooseCurric.TabIndex = 3;
-            this.ChooseCurric.Text = "Open Exisiting Curriculum";
+            this.chooseCurricCBox.FormattingEnabled = true;
+            this.chooseCurricCBox.Location = new System.Drawing.Point(237, 134);
+            this.chooseCurricCBox.Name = "chooseCurricCBox";
+            this.chooseCurricCBox.Size = new System.Drawing.Size(154, 21);
+            this.chooseCurricCBox.TabIndex = 3;
+            this.chooseCurricCBox.Text = "Open Exisiting Curriculum";
             // 
             // OpeningPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 265);
-            this.Controls.Add(this.ChooseCurric);
-            this.Controls.Add(this.ChooseClassroom);
-            this.Controls.Add(this.CreateCurric);
-            this.Controls.Add(this.CreateClass);
+            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.Controls.Add(this.chooseCurricCBox);
+            this.Controls.Add(this.chooseClassCBox);
+            this.Controls.Add(this.chooseCurricBtn);
+            this.Controls.Add(this.chooseClassBtn);
             this.Name = "OpeningPage";
             this.Text = "Welcome!";
             this.ResumeLayout(false);
@@ -89,9 +89,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button CreateClass;
-        private System.Windows.Forms.Button CreateCurric;
-        private System.Windows.Forms.ComboBox ChooseClassroom;
-        private System.Windows.Forms.ComboBox ChooseCurric;
+        private System.Windows.Forms.Button chooseClassBtn;
+        private System.Windows.Forms.Button chooseCurricBtn;
+        private System.Windows.Forms.ComboBox chooseClassCBox;
+        private System.Windows.Forms.ComboBox chooseCurricCBox;
     }
 }

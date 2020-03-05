@@ -22,22 +22,29 @@ namespace EBook_tools
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void PreTestBtn_Click(object sender, EventArgs e)
         {
             preTest pre = new preTest();
             pre.Show();
         }
 
-        private void pstBtn_Click(object sender, EventArgs e)
+        private void PostTestBtn_Click(object sender, EventArgs e)
         {
             postTest post = new postTest();
             post.Show();
         }
 
-        private void txtButton_Click(object sender, EventArgs e)
+        private void OpenTXTBtn_Click(object sender, EventArgs e)
         {
             TXTreader txt = new TXTreader();
             txt.Show();
+
+        }
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LessonCreator lc = new LessonCreator();
+            lc.Show();
 
         }
     }

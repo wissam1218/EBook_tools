@@ -21,6 +21,7 @@ namespace EBook_tools
         {
             InitializeComponent();
             tw.WriteLine("POST-TEST\r\n");
+            qLbl.Text = "Question #" + count;
             qBox.Text = "Enter question here";
             aBox.Text = "Enter an answer here";
             bBox.Text = "Enter an answer here";
@@ -28,12 +29,6 @@ namespace EBook_tools
             dBox.Text = "Enter an answer here";
             ansBox.Text = "Enter the correct answer here";
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-            
-        }
-
         public void addBtn_Click(object sender, EventArgs e)
         {
             tw.WriteLine("Question #" + count);
@@ -58,22 +53,18 @@ namespace EBook_tools
             dBox.Text = "Answer 4";
             ansBox.Text = "Actual answer";
             count++;
-
+            qLbl.Text = "Question #" + count;
         }
 
         private void buildBtn_Click(object sender, EventArgs e)
         {
             tw.Close();
+            this.Close();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void postTest_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
+            tw.Close();
         }
     }
 }

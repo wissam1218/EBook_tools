@@ -21,13 +21,14 @@ namespace EBook_tools
         {
 
         }
-        private void CreateClass_Click(object sender, EventArgs e)
+        private void chooseClassBtn_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void CreateCurric_Click(object sender, EventArgs e)
+        private void chooseCurricBtn_Click(object sender, EventArgs e)
         {
+            this.Hide();
             LessonCreator newCurric = new LessonCreator();
             newCurric.Show();
         }
