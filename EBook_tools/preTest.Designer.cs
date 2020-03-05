@@ -52,7 +52,7 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // ansBox
             // 
@@ -140,7 +140,7 @@
             this.buildBtn.Name = "buildBtn";
             this.buildBtn.Size = new System.Drawing.Size(107, 21);
             this.buildBtn.TabIndex = 13;
-            this.buildBtn.Text = "&Build my Test";
+            this.buildBtn.Text = "&Build and Close";
             this.buildBtn.UseVisualStyleBackColor = true;
             this.buildBtn.Click += new System.EventHandler(this.buildBtn_Click);
             // 

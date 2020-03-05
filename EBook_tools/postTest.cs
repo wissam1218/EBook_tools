@@ -59,6 +59,12 @@ namespace EBook_tools
         private void buildBtn_Click(object sender, EventArgs e)
         {
             tw.Close();
+            this.Close();
+        }
+
+        private void postTest_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            tw.Close();
         }
     }
 }

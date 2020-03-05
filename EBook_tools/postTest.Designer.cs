@@ -62,11 +62,11 @@
             this.groupBox1.Controls.Add(this.aLbl);
             this.groupBox1.Controls.Add(this.qBox);
             this.groupBox1.Controls.Add(this.qLbl);
-            this.groupBox1.Location = new System.Drawing.Point(1, 8);
+            this.groupBox1.Location = new System.Drawing.Point(8, 8);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(524, 277);
+            this.groupBox1.Size = new System.Drawing.Size(517, 277);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add A Question";
@@ -78,16 +78,16 @@
             this.buildBtn.Name = "buildBtn";
             this.buildBtn.Size = new System.Drawing.Size(107, 21);
             this.buildBtn.TabIndex = 13;
-            this.buildBtn.Text = "&Build my Test";
+            this.buildBtn.Text = "&Build and Close";
             this.buildBtn.UseVisualStyleBackColor = true;
             this.buildBtn.Click += new System.EventHandler(this.buildBtn_Click);
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(395, 148);
+            this.addBtn.Location = new System.Drawing.Point(395, 147);
             this.addBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(107, 19);
+            this.addBtn.Size = new System.Drawing.Size(107, 21);
             this.addBtn.TabIndex = 12;
             this.addBtn.Text = "Add Question";
             this.addBtn.UseVisualStyleBackColor = true;
@@ -210,6 +210,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "postTest";
             this.Text = "Post-Test Creator";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.postTest_FormClosed);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
