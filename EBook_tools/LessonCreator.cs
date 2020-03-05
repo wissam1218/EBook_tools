@@ -18,12 +18,12 @@ namespace EBook_tools
             InitializeComponent();
         }
 
-        private void ViewPDFBtn_Click(object sender, EventArgs e)
+        private void viewPDFBtn_Click(object sender, EventArgs e)
         {
             PDFView pdf = new PDFView();
             pdf.Show();
         }
-        private void TestBtn_Click(object sender, EventArgs e)
+        private void testBtn_Click(object sender, EventArgs e)
         {
             this.Close();
             CreateTest testform = new CreateTest();
@@ -31,21 +31,16 @@ namespace EBook_tools
 
         }
 
-        private void EditPDFBtn_Click(object sender, EventArgs e)
+        private void editPDFBtn_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void BackBtn_Click(object sender, EventArgs e)
+        private void backBtn_Click(object sender, EventArgs e)
         {
             this.Close();
             OpeningPage page = new OpeningPage();
             page.Show();
-
-        }
-
-        private void LessonCreator_Load(object sender, EventArgs e)
-        {
 
         }
     }

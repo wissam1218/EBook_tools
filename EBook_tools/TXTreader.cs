@@ -36,7 +36,7 @@ namespace EBook_tools
                     line = read.ReadLine();
                     if (line != null)
                     {
-                        listBox1.Items.Add(line);
+                        textLBox.Items.Add(line);
 
                     }
                      
