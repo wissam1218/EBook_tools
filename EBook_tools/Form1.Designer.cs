@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ViewBtn = new System.Windows.Forms.Button();
+            this.ViewPDFBtn = new System.Windows.Forms.Button();
             this.TestButton = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.EditPDFBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // ViewBtn
+            // ViewPDFBtn
             // 
-            this.ViewBtn.Location = new System.Drawing.Point(387, 126);
-            this.ViewBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ViewBtn.Name = "ViewBtn";
-            this.ViewBtn.Size = new System.Drawing.Size(101, 25);
-            this.ViewBtn.TabIndex = 1;
-            this.ViewBtn.Text = "View a pdf";
-            this.ViewBtn.UseVisualStyleBackColor = true;
-            this.ViewBtn.Click += new System.EventHandler(this.button2_Click);
+            this.ViewPDFBtn.Location = new System.Drawing.Point(387, 126);
+            this.ViewPDFBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ViewPDFBtn.Name = "ViewPDFBtn";
+            this.ViewPDFBtn.Size = new System.Drawing.Size(101, 25);
+            this.ViewPDFBtn.TabIndex = 1;
+            this.ViewPDFBtn.Text = "View a pdf";
+            this.ViewPDFBtn.UseVisualStyleBackColor = true;
+            this.ViewPDFBtn.Click += new System.EventHandler(this.button2_Click);
             // 
             // TestButton
             // 
@@ -55,24 +55,24 @@
             this.TestButton.UseVisualStyleBackColor = true;
             this.TestButton.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button5
+            // EditPDFBtn
             // 
-            this.button5.Location = new System.Drawing.Point(240, 126);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(101, 25);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Edit PDF";
-            this.button5.UseVisualStyleBackColor = true;
+            this.EditPDFBtn.Location = new System.Drawing.Point(240, 126);
+            this.EditPDFBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditPDFBtn.Name = "EditPDFBtn";
+            this.EditPDFBtn.Size = new System.Drawing.Size(101, 25);
+            this.EditPDFBtn.TabIndex = 4;
+            this.EditPDFBtn.Text = "Edit PDF";
+            this.EditPDFBtn.UseVisualStyleBackColor = true;
             // 
             // LessonCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 292);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.EditPDFBtn);
             this.Controls.Add(this.TestButton);
-            this.Controls.Add(this.ViewBtn);
+            this.Controls.Add(this.ViewPDFBtn);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "LessonCreator";
             this.Text = "Lesson Creator";
@@ -83,9 +83,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button ViewBtn;
+        private System.Windows.Forms.Button ViewPDFBtn;
         private System.Windows.Forms.Button TestButton;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button EditPDFBtn;
     }
 }
 

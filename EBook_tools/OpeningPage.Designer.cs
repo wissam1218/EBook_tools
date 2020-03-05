@@ -31,7 +31,7 @@
             this.CreateClass = new System.Windows.Forms.Button();
             this.CreateCurric = new System.Windows.Forms.Button();
             this.ChooseClassroom = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.ChooseCurric = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // CreateClass
@@ -42,6 +42,7 @@
             this.CreateClass.TabIndex = 0;
             this.CreateClass.Text = "Create Classroom";
             this.CreateClass.UseVisualStyleBackColor = true;
+            this.CreateClass.Click += new System.EventHandler(this.CreateClass_Click);
             // 
             // CreateCurric
             // 
@@ -51,6 +52,7 @@
             this.CreateCurric.TabIndex = 1;
             this.CreateCurric.Text = "Create Curriculum";
             this.CreateCurric.UseVisualStyleBackColor = true;
+            this.CreateCurric.Click += new System.EventHandler(this.CreateCurric_Click);
             // 
             // ChooseClassroom
             // 
@@ -61,21 +63,21 @@
             this.ChooseClassroom.TabIndex = 2;
             this.ChooseClassroom.Text = "Open Existing Classroom";
             // 
-            // comboBox2
+            // ChooseCurric
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(237, 134);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(154, 21);
-            this.comboBox2.TabIndex = 3;
-            this.comboBox2.Text = "Open Exisiting Curriculum";
+            this.ChooseCurric.FormattingEnabled = true;
+            this.ChooseCurric.Location = new System.Drawing.Point(237, 134);
+            this.ChooseCurric.Name = "ChooseCurric";
+            this.ChooseCurric.Size = new System.Drawing.Size(154, 21);
+            this.ChooseCurric.TabIndex = 3;
+            this.ChooseCurric.Text = "Open Exisiting Curriculum";
             // 
             // OpeningPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(473, 265);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.ChooseCurric);
             this.Controls.Add(this.ChooseClassroom);
             this.Controls.Add(this.CreateCurric);
             this.Controls.Add(this.CreateClass);
@@ -90,6 +92,6 @@
         private System.Windows.Forms.Button CreateClass;
         private System.Windows.Forms.Button CreateCurric;
         private System.Windows.Forms.ComboBox ChooseClassroom;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox ChooseCurric;
     }
 }

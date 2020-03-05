@@ -28,7 +28,7 @@ namespace EBook_tools
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            AddToLesson form = new AddToLesson();
+            CreateTest form = new CreateTest();
             form.Show();
 
         }
