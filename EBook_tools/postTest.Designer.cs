@@ -42,11 +42,13 @@
             this.aLbl = new System.Windows.Forms.Label();
             this.qBox = new System.Windows.Forms.TextBox();
             this.qLbl = new System.Windows.Forms.Label();
+            this.buildBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buildBtn);
             this.groupBox1.Controls.Add(this.addBtn);
             this.groupBox1.Controls.Add(this.ansBox);
             this.groupBox1.Controls.Add(this.dBox);
@@ -68,17 +70,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add A Question";
-            // 
-            // buildBtn
-            // 
-            this.buildBtn.Location = new System.Drawing.Point(395, 225);
-            this.buildBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.buildBtn.Name = "buildBtn";
-            this.buildBtn.Size = new System.Drawing.Size(107, 21);
-            this.buildBtn.TabIndex = 13;
-            this.buildBtn.Text = "&Build and Close";
-            this.buildBtn.UseVisualStyleBackColor = true;
-            this.buildBtn.Click += new System.EventHandler(this.buildBtn_Click);
             // 
             // addBtn
             // 
@@ -199,6 +190,16 @@
             this.qLbl.TabIndex = 0;
             this.qLbl.Text = "Question";
             // 
+            // buildBtn
+            // 
+            this.buildBtn.Location = new System.Drawing.Point(395, 225);
+            this.buildBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.buildBtn.Name = "buildBtn";
+            this.buildBtn.Size = new System.Drawing.Size(107, 21);
+            this.buildBtn.TabIndex = 14;
+            this.buildBtn.Text = "&Build and Close";
+            this.buildBtn.UseVisualStyleBackColor = true;
+            // 
             // postTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,5 +232,6 @@
         private System.Windows.Forms.Label aLbl;
         private System.Windows.Forms.TextBox qBox;
         private System.Windows.Forms.Button addBtn;
+        private System.Windows.Forms.Button buildBtn;
     }
 }
