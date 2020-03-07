@@ -35,44 +35,46 @@
             this.cBox = new System.Windows.Forms.TextBox();
             this.bBox = new System.Windows.Forms.TextBox();
             this.aBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.dLbl = new System.Windows.Forms.Label();
+            this.cLbl = new System.Windows.Forms.Label();
+            this.ansLbl = new System.Windows.Forms.Label();
+            this.bLbl = new System.Windows.Forms.Label();
+            this.aLbl = new System.Windows.Forms.Label();
             this.qBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.qLbl = new System.Windows.Forms.Label();
+            this.buildBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.buildBtn);
             this.groupBox1.Controls.Add(this.addBtn);
             this.groupBox1.Controls.Add(this.ansBox);
             this.groupBox1.Controls.Add(this.dBox);
             this.groupBox1.Controls.Add(this.cBox);
             this.groupBox1.Controls.Add(this.bBox);
             this.groupBox1.Controls.Add(this.aBox);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.dLbl);
+            this.groupBox1.Controls.Add(this.cLbl);
+            this.groupBox1.Controls.Add(this.ansLbl);
+            this.groupBox1.Controls.Add(this.bLbl);
+            this.groupBox1.Controls.Add(this.aLbl);
             this.groupBox1.Controls.Add(this.qBox);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(2, 12);
+            this.groupBox1.Controls.Add(this.qLbl);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(786, 426);
+            this.groupBox1.Size = new System.Drawing.Size(776, 426);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Add A Question";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(626, 210);
+            this.addBtn.Location = new System.Drawing.Point(592, 226);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(154, 41);
+            this.addBtn.Size = new System.Drawing.Size(160, 32);
             this.addBtn.TabIndex = 12;
             this.addBtn.Text = "Add Question";
             this.addBtn.UseVisualStyleBackColor = true;
@@ -80,112 +82,119 @@
             // 
             // ansBox
             // 
-            this.ansBox.Location = new System.Drawing.Point(98, 394);
+            this.ansBox.Location = new System.Drawing.Point(134, 346);
             this.ansBox.Name = "ansBox";
-            this.ansBox.Size = new System.Drawing.Size(395, 26);
+            this.ansBox.Size = new System.Drawing.Size(421, 26);
             this.ansBox.TabIndex = 11;
             // 
             // dBox
             // 
-            this.dBox.Location = new System.Drawing.Point(165, 210);
+            this.dBox.Location = new System.Drawing.Point(134, 226);
             this.dBox.Name = "dBox";
-            this.dBox.Size = new System.Drawing.Size(438, 26);
+            this.dBox.Size = new System.Drawing.Size(421, 26);
             this.dBox.TabIndex = 10;
             // 
             // cBox
             // 
-            this.cBox.Location = new System.Drawing.Point(165, 178);
+            this.cBox.Location = new System.Drawing.Point(134, 194);
             this.cBox.Name = "cBox";
-            this.cBox.Size = new System.Drawing.Size(438, 26);
+            this.cBox.Size = new System.Drawing.Size(421, 26);
             this.cBox.TabIndex = 9;
             // 
             // bBox
             // 
-            this.bBox.Location = new System.Drawing.Point(165, 146);
+            this.bBox.Location = new System.Drawing.Point(134, 162);
             this.bBox.Name = "bBox";
-            this.bBox.Size = new System.Drawing.Size(438, 26);
+            this.bBox.Size = new System.Drawing.Size(421, 26);
             this.bBox.TabIndex = 8;
             // 
             // aBox
             // 
-            this.aBox.Location = new System.Drawing.Point(165, 114);
+            this.aBox.Location = new System.Drawing.Point(134, 129);
             this.aBox.Name = "aBox";
-            this.aBox.Size = new System.Drawing.Size(438, 26);
+            this.aBox.Size = new System.Drawing.Size(421, 26);
             this.aBox.TabIndex = 7;
             // 
-            // label6
+            // dLbl
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(140, 210);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(21, 20);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "D";
+            this.dLbl.AutoSize = true;
+            this.dLbl.Location = new System.Drawing.Point(106, 232);
+            this.dLbl.Name = "dLbl";
+            this.dLbl.Size = new System.Drawing.Size(21, 20);
+            this.dLbl.TabIndex = 6;
+            this.dLbl.Text = "D";
             // 
-            // label5
+            // cLbl
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(140, 184);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(20, 20);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "C";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.cLbl.AutoSize = true;
+            this.cLbl.Location = new System.Drawing.Point(106, 200);
+            this.cLbl.Name = "cLbl";
+            this.cLbl.Size = new System.Drawing.Size(20, 20);
+            this.cLbl.TabIndex = 5;
+            this.cLbl.Text = "C";
             // 
-            // label4
+            // ansLbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 397);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Answer";
+            this.ansLbl.AutoSize = true;
+            this.ansLbl.Location = new System.Drawing.Point(6, 352);
+            this.ansLbl.Name = "ansLbl";
+            this.ansLbl.Size = new System.Drawing.Size(62, 20);
+            this.ansLbl.TabIndex = 4;
+            this.ansLbl.Text = "Answer";
             // 
-            // label3
+            // bLbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(140, 155);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(20, 20);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "B";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.bLbl.AutoSize = true;
+            this.bLbl.Location = new System.Drawing.Point(106, 168);
+            this.bLbl.Name = "bLbl";
+            this.bLbl.Size = new System.Drawing.Size(20, 20);
+            this.bLbl.TabIndex = 3;
+            this.bLbl.Text = "B";
             // 
-            // label2
+            // aLbl
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(140, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(20, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "A";
+            this.aLbl.AutoSize = true;
+            this.aLbl.Location = new System.Drawing.Point(106, 135);
+            this.aLbl.Name = "aLbl";
+            this.aLbl.Size = new System.Drawing.Size(20, 20);
+            this.aLbl.TabIndex = 2;
+            this.aLbl.Text = "A";
             // 
             // qBox
             // 
-            this.qBox.Location = new System.Drawing.Point(165, 54);
+            this.qBox.Location = new System.Drawing.Point(134, 60);
             this.qBox.Name = "qBox";
-            this.qBox.Size = new System.Drawing.Size(438, 26);
+            this.qBox.Size = new System.Drawing.Size(421, 26);
             this.qBox.TabIndex = 1;
             // 
-            // label1
+            // qLbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Question";
+            this.qLbl.AutoSize = true;
+            this.qLbl.Location = new System.Drawing.Point(6, 60);
+            this.qLbl.Name = "qLbl";
+            this.qLbl.Size = new System.Drawing.Size(73, 20);
+            this.qLbl.TabIndex = 0;
+            this.qLbl.Text = "Question";
+            // 
+            // buildBtn
+            // 
+            this.buildBtn.Location = new System.Drawing.Point(692, 402);
+            this.buildBtn.Name = "buildBtn";
+            this.buildBtn.Size = new System.Drawing.Size(75, 23);
+            this.buildBtn.TabIndex = 13;
+            this.buildBtn.Text = "button1";
+            this.buildBtn.UseVisualStyleBackColor = true;
+            this.buildBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // postTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 449);
             this.Controls.Add(this.groupBox1);
             this.Name = "postTest";
-            this.Text = "postTest";
+            this.Text = "Post-Test Creator";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.postTest_FormClosed);
-            this.Load += new System.EventHandler(this.postTest_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -195,18 +204,19 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label qLbl;
         private System.Windows.Forms.TextBox ansBox;
         private System.Windows.Forms.TextBox dBox;
         private System.Windows.Forms.TextBox cBox;
         private System.Windows.Forms.TextBox bBox;
         private System.Windows.Forms.TextBox aBox;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label dLbl;
+        private System.Windows.Forms.Label cLbl;
+        private System.Windows.Forms.Label ansLbl;
+        private System.Windows.Forms.Label bLbl;
+        private System.Windows.Forms.Label aLbl;
         private System.Windows.Forms.TextBox qBox;
         private System.Windows.Forms.Button addBtn;
+        private System.Windows.Forms.Button buildBtn;
     }
 }

@@ -15,11 +15,14 @@ namespace EBook_tools
     public partial class preTest : Form
     {
         public static int count = 1;
-       TextWriter tw = new StreamWriter("C:/Users/Sam_Ham/Desktop/preTest.txt", true);
+       TextWriter tw = new StreamWriter("preTest.txt", true);
         
-        public preTest()
+public preTest()
         {
+       
             InitializeComponent();
+            tw.WriteLine("PRE-TEST\r\n");
+            qLbl.Text = "Question #" + count;
             qBox.Text = "Enter question here";
             aBox.Text = "Enter an answer here";
             bBox.Text = "Enter an answer here";
@@ -28,16 +31,16 @@ namespace EBook_tools
             ansBox.Text = "Enter the correct answer here";
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void addBtn_Click(object sender, EventArgs e)
         { 
-            //tw.WriteLine("Question #"+count);
-            tw.WriteLine("$"+this.qBox.Text);
-            tw.WriteLine("&"+this.aBox.Text);
-            tw.WriteLine("!"+this.bBox.Text);
-            tw.WriteLine("*"+this.cBox.Text);
-            tw.WriteLine("@"+this.dBox.Text);
-            tw.WriteLine("."+this.ansBox.Text);
-          
+            tw.WriteLine("Question #"+count);
+            tw.WriteLine(qBox.Text);
+            tw.WriteLine(aBox.Text);
+            tw.WriteLine(bBox.Text);
+            tw.WriteLine(cBox.Text);
+            tw.WriteLine(dBox.Text);
+            tw.WriteLine("ANSWER: "+ansBox.Text);
+            tw.WriteLine("~~~~~~~~~~~~~~~");
             qBox.Clear();
             aBox.Clear();
             bBox.Clear();
@@ -52,26 +55,17 @@ namespace EBook_tools
             dBox.Text = "Answer 4";
             ansBox.Text = "Actual answer";
             count++;
+            qLbl.Text = "Question #" + count;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buildBtn_Click(object sender, EventArgs e)
         {
+            tw.Close();
+            this.Close();
         }
-
-        private void qBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void preTest_FormClosed(object sender, FormClosedEventArgs e)
         {
             tw.Close();
-
         }
     }
 }
