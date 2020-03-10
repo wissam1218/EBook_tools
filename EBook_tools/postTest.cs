@@ -62,6 +62,7 @@ namespace EBook_tools
             this.Close();
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
         private void postTest_FormClosed(object sender, FormClosedEventArgs e)
         {
             tw.Close();
