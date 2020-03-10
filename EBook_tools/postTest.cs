@@ -13,14 +13,14 @@ namespace EBook_tools
 {
     public partial class postTest : Form
     {
-        
+        public static int numOfFiles = 1;
         public static int count = 1;
-        TextWriter tw = new StreamWriter("postTest.txt", true);
+        TextWriter tw = new StreamWriter("postTest"+numOfFiles+".txt", true);
 
         public postTest()
         {
             InitializeComponent();
-            tw.WriteLine("POST-TEST\r\n");
+           // tw.WriteLine("POST-TEST\r\n");
             qLbl.Text = "Question #" + count;
             qBox.Text = "Enter question here";
             aBox.Text = "Enter an answer here";
@@ -31,14 +31,14 @@ namespace EBook_tools
         }
         public void addBtn_Click(object sender, EventArgs e)
         {
-            tw.WriteLine("Question #" + count);
-            tw.WriteLine(this.qBox.Text);
-            tw.WriteLine(this.aBox.Text);
-            tw.WriteLine(this.bBox.Text);
-            tw.WriteLine(this.cBox.Text);
-            tw.WriteLine(this.dBox.Text);
-            tw.WriteLine("ANSWER: " + this.ansBox.Text);
-            tw.WriteLine("~~~~~~~~~~~~~~~");
+           // tw.WriteLine("Question #" + count);
+            tw.WriteLine("$"+this.qBox.Text+">");
+            tw.WriteLine("&"+this.aBox.Text);
+            tw.WriteLine("!"+this.bBox.Text);
+            tw.WriteLine("*"+this.cBox.Text);
+            tw.WriteLine("@"+this.dBox.Text);
+            tw.WriteLine("." + this.ansBox.Text);
+          //  tw.WriteLine("~~~~~~~~~~~~~~~");
             qBox.Clear();
             aBox.Clear();
             bBox.Clear();
@@ -63,8 +63,13 @@ namespace EBook_tools
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
         private void postTest_FormClosed(object sender, FormClosedEventArgs e)
         {
+            count = 1;
+            numOfFiles++;
             tw.Close();
         }
     }

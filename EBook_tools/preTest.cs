@@ -14,14 +14,15 @@ namespace EBook_tools
 {
     public partial class preTest : Form
     {
+        public static int numOfFiles = 1;
         public static int count = 1;
-       TextWriter tw = new StreamWriter("preTest.txt", true);
+       TextWriter tw = new StreamWriter("preTest"+numOfFiles+".txt", true);
         
 public preTest()
         {
        
             InitializeComponent();
-            tw.WriteLine("PRE-TEST\r\n");
+           // tw.WriteLine("PRE-TEST\r\n");
             qLbl.Text = "Question #" + count;
             qBox.Text = "Enter question here";
             aBox.Text = "Enter an answer here";
@@ -32,15 +33,15 @@ public preTest()
         }
 
         private void addBtn_Click(object sender, EventArgs e)
-        { 
-            tw.WriteLine("Question #"+count);
-            tw.WriteLine(qBox.Text);
-            tw.WriteLine(aBox.Text);
-            tw.WriteLine(bBox.Text);
-            tw.WriteLine(cBox.Text);
-            tw.WriteLine(dBox.Text);
-            tw.WriteLine("ANSWER: "+ansBox.Text);
-            tw.WriteLine("~~~~~~~~~~~~~~~");
+        {
+            // tw.WriteLine("Question #"+count);
+            tw.WriteLine("$" + this.qBox.Text + ">");
+            tw.WriteLine("&" + this.aBox.Text);
+            tw.WriteLine("!" + this.bBox.Text);
+            tw.WriteLine("*" + this.cBox.Text);
+            tw.WriteLine("@" + this.dBox.Text);
+            tw.WriteLine("." + this.ansBox.Text);
+            // tw.WriteLine("~~~~~~~~~~~~~~~");
             qBox.Clear();
             aBox.Clear();
             bBox.Clear();
@@ -65,6 +66,8 @@ public preTest()
         }
         private void preTest_FormClosed(object sender, FormClosedEventArgs e)
         {
+            count = 1;
+            numOfFiles++;
             tw.Close();
         }
     }

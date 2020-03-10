@@ -199,6 +199,7 @@
             this.buildBtn.TabIndex = 14;
             this.buildBtn.Text = "&Build and Close";
             this.buildBtn.UseVisualStyleBackColor = true;
+            this.buildBtn.Click += new System.EventHandler(this.buildBtn_Click);
             // 
             // postTest
             // 
