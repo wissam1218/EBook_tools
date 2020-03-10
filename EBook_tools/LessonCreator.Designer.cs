@@ -31,7 +31,6 @@
             this.viewPDFBtn = new System.Windows.Forms.Button();
             this.testsMenuBtn = new System.Windows.Forms.Button();
             this.editPDFBtn = new System.Windows.Forms.Button();
-            this.backBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // viewPDFBtn
@@ -67,29 +66,24 @@
             this.editPDFBtn.UseVisualStyleBackColor = true;
             this.editPDFBtn.Click += new System.EventHandler(this.editPDFBtn_Click);
             // 
-            // backBtn
-            // 
-            this.backBtn.Location = new System.Drawing.Point(446, 257);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.Size = new System.Drawing.Size(75, 23);
-            this.backBtn.TabIndex = 5;
-            this.backBtn.Text = "Back";
-            this.backBtn.UseVisualStyleBackColor = true;
-            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
-            // 
             // LessonCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
-            this.Controls.Add(this.backBtn);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(550, 300);
+            this.ControlBox = false;
             this.Controls.Add(this.editPDFBtn);
             this.Controls.Add(this.testsMenuBtn);
             this.Controls.Add(this.viewPDFBtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LessonCreator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Lesson Creator";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LessonCreator_FormClosed);
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
         }
@@ -99,7 +93,6 @@
         private System.Windows.Forms.Button viewPDFBtn;
         private System.Windows.Forms.Button testsMenuBtn;
         private System.Windows.Forms.Button editPDFBtn;
-        private System.Windows.Forms.Button backBtn;
     }
 }
 

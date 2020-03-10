@@ -19,38 +19,37 @@ namespace EBook_tools
 
         private void OpeningPage_Load(object sender, EventArgs e)
         {
-
-        }
-        private void chooseClassBtn_Click(object sender, EventArgs e)
-        {
-
+            //??
         }
 
-        private void chooseCurricBtn_Click(object sender, EventArgs e)
+        private void createCurricMI_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            LessonCreator newCurric = new LessonCreator();
-            newCurric.Show();
+           //create curriculum
         }
 
-        private void OpeningPage_Load_1(object sender, EventArgs e)
+        private void createClassroomMI_Click(object sender, EventArgs e)
         {
-
+            //create classroom
         }
 
-        private void cirriculumToolStripMenuItem_Click(object sender, EventArgs e)
+        LessonCreator lc;
+        private void createLessonMI_Click(object sender, EventArgs e)
         {
-
+            if (lc == null)
+            {
+                lc = new LessonCreator();
+                lc.MdiParent = this;
+                lc.FormClosed += new FormClosedEventHandler(lc_FormClosed);
+                lc.Show();
+            }
+            else
+            {
+                lc.Activate();
+            }
         }
-
-        private void classroomToolStripMenuItem_Click(object sender, EventArgs e)
+        void lc_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-        }
-
-        private void createToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
+            lc = null;
         }
     }
 }

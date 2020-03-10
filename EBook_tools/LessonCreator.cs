@@ -35,18 +35,5 @@ namespace EBook_tools
         {
 
         }
-
-        private void backBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            OpeningPage page = new OpeningPage();
-            page.Show();
-
-        }
-
-        private void LessonCreator_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }
