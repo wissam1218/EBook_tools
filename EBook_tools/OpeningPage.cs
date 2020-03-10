@@ -33,5 +33,24 @@ namespace EBook_tools
             newCurric.Show();
         }
 
+        private void OpeningPage_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cirriculumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void classroomToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void createToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

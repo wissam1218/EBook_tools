@@ -43,5 +43,10 @@ namespace EBook_tools
             page.Show();
 
         }
+
+        private void LessonCreator_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

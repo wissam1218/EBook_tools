@@ -89,6 +89,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LessonCreator";
             this.Text = "Lesson Creator";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LessonCreator_FormClosed);
             this.ResumeLayout(false);
 
         }
