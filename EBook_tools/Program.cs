@@ -16,7 +16,7 @@ namespace EBook_tools
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OpeningPage());
+            Application.Run(new LessonMaker());
         }
     }
 }

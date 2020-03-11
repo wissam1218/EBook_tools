@@ -66,5 +66,10 @@ namespace EBook_tools
         {
             tw.Close();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
