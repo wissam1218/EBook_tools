@@ -21,13 +21,13 @@ namespace EBook_tools
         {
             InitializeComponent();
            // tw.WriteLine("POST-TEST\r\n");
-            qLbl.Text = "Question #" + count;
-            qBox.Text = "Enter question here";
-            aBox.Text = "Enter an answer here";
-            bBox.Text = "Enter an answer here";
-            cBox.Text = "Enter an answer here";
-            dBox.Text = "Enter an answer here";
-            ansBox.Text = "Enter the correct answer here";
+           // qLbl.Text = "Question #" + count;
+            qBox.Text = "Enter question #"+count+" here";
+            aBox.Text = "Choice";
+            bBox.Text = "Choice";
+            cBox.Text = "Choice";
+            dBox.Text = "Answer";
+            ansBox.Text = "Answer";
         }
         public void addBtn_Click(object sender, EventArgs e)
         {
@@ -47,13 +47,13 @@ namespace EBook_tools
             ansBox.Clear();
             
             qBox.Text = "What is question #: " + (count+1).ToString();
-            aBox.Text = "Answer 1";
-            bBox.Text = "Answer 2";
-            cBox.Text = "Answer 3";
-            dBox.Text = "Answer 4";
-            ansBox.Text = "Actual answer";
+            aBox.Text = "Choice";
+            bBox.Text = "Choice";
+            cBox.Text = "Choice";
+            dBox.Text = "Answer";
+            ansBox.Text = "Answer";
             count++;
-            qLbl.Text = "Question #" + count;
+           // qLbl.Text = "Question #" + count;
         }
 
         private void buildBtn_Click(object sender, EventArgs e)
