@@ -39,17 +39,19 @@
             this.pdf.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pdf.Enabled = true;
             this.pdf.Location = new System.Drawing.Point(0, 0);
+            this.pdf.Margin = new System.Windows.Forms.Padding(2);
             this.pdf.Name = "pdf";
             this.pdf.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdf.OcxState")));
-            this.pdf.Size = new System.Drawing.Size(458, 459);
+            this.pdf.Size = new System.Drawing.Size(584, 361);
             this.pdf.TabIndex = 0;
             this.pdf.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Location = new System.Drawing.Point(8, 8);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 50);
+            this.button1.Size = new System.Drawing.Size(116, 32);
             this.button1.TabIndex = 1;
             this.button1.Text = "Choose file";
             this.button1.UseVisualStyleBackColor = true;
@@ -57,13 +59,19 @@
             // 
             // PDFView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 459);
+            this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pdf);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "PDFView";
-            this.Text = "PDFView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = " PDF Viewer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pdf)).EndInit();
             this.ResumeLayout(false);
 

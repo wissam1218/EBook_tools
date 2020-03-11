@@ -72,5 +72,10 @@ namespace EBook_tools
             numOfFiles++;
             tw.Close();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

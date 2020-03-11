@@ -56,10 +56,10 @@
             // 
             // ansBox
             // 
-            this.ansBox.Location = new System.Drawing.Point(89, 225);
+            this.ansBox.Location = new System.Drawing.Point(89, 248);
             this.ansBox.Margin = new System.Windows.Forms.Padding(2);
             this.ansBox.Name = "ansBox";
-            this.ansBox.Size = new System.Drawing.Size(282, 20);
+            this.ansBox.Size = new System.Drawing.Size(345, 20);
             this.ansBox.TabIndex = 19;
             // 
             // qLbl
@@ -75,7 +75,7 @@
             // cLbl
             // 
             this.cLbl.AutoSize = true;
-            this.cLbl.Location = new System.Drawing.Point(71, 130);
+            this.cLbl.Location = new System.Drawing.Point(71, 158);
             this.cLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cLbl.Name = "cLbl";
             this.cLbl.Size = new System.Drawing.Size(14, 13);
@@ -85,7 +85,7 @@
             // bLbl
             // 
             this.bLbl.AutoSize = true;
-            this.bLbl.Location = new System.Drawing.Point(71, 109);
+            this.bLbl.Location = new System.Drawing.Point(71, 137);
             this.bLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bLbl.Name = "bLbl";
             this.bLbl.Size = new System.Drawing.Size(14, 13);
@@ -95,7 +95,7 @@
             // aLbl
             // 
             this.aLbl.AutoSize = true;
-            this.aLbl.Location = new System.Drawing.Point(71, 88);
+            this.aLbl.Location = new System.Drawing.Point(71, 116);
             this.aLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.aLbl.Name = "aLbl";
             this.aLbl.Size = new System.Drawing.Size(14, 13);
@@ -105,7 +105,7 @@
             // dLbl
             // 
             this.dLbl.AutoSize = true;
-            this.dLbl.Location = new System.Drawing.Point(71, 151);
+            this.dLbl.Location = new System.Drawing.Point(71, 179);
             this.dLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dLbl.Name = "dLbl";
             this.dLbl.Size = new System.Drawing.Size(15, 13);
@@ -115,7 +115,7 @@
             // ansLbl
             // 
             this.ansLbl.AutoSize = true;
-            this.ansLbl.Location = new System.Drawing.Point(4, 229);
+            this.ansLbl.Location = new System.Drawing.Point(4, 251);
             this.ansLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ansLbl.Name = "ansLbl";
             this.ansLbl.Size = new System.Drawing.Size(42, 13);
@@ -124,7 +124,7 @@
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(395, 147);
+            this.addBtn.Location = new System.Drawing.Point(4, 317);
             this.addBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(107, 21);
@@ -135,7 +135,7 @@
             // 
             // buildBtn
             // 
-            this.buildBtn.Location = new System.Drawing.Point(395, 225);
+            this.buildBtn.Location = new System.Drawing.Point(454, 317);
             this.buildBtn.Margin = new System.Windows.Forms.Padding(2);
             this.buildBtn.Name = "buildBtn";
             this.buildBtn.Size = new System.Drawing.Size(107, 21);
@@ -149,39 +149,39 @@
             this.qBox.Location = new System.Drawing.Point(89, 39);
             this.qBox.Margin = new System.Windows.Forms.Padding(2);
             this.qBox.Name = "qBox";
-            this.qBox.Size = new System.Drawing.Size(281, 20);
+            this.qBox.Size = new System.Drawing.Size(345, 20);
             this.qBox.TabIndex = 14;
             // 
             // aBox
             // 
-            this.aBox.Location = new System.Drawing.Point(89, 84);
+            this.aBox.Location = new System.Drawing.Point(89, 112);
             this.aBox.Margin = new System.Windows.Forms.Padding(2);
             this.aBox.Name = "aBox";
-            this.aBox.Size = new System.Drawing.Size(282, 20);
+            this.aBox.Size = new System.Drawing.Size(345, 20);
             this.aBox.TabIndex = 15;
             // 
             // bBox
             // 
-            this.bBox.Location = new System.Drawing.Point(89, 105);
+            this.bBox.Location = new System.Drawing.Point(89, 133);
             this.bBox.Margin = new System.Windows.Forms.Padding(2);
             this.bBox.Name = "bBox";
-            this.bBox.Size = new System.Drawing.Size(282, 20);
+            this.bBox.Size = new System.Drawing.Size(345, 20);
             this.bBox.TabIndex = 16;
             // 
             // cBox
             // 
-            this.cBox.Location = new System.Drawing.Point(89, 126);
+            this.cBox.Location = new System.Drawing.Point(89, 154);
             this.cBox.Margin = new System.Windows.Forms.Padding(2);
             this.cBox.Name = "cBox";
-            this.cBox.Size = new System.Drawing.Size(282, 20);
+            this.cBox.Size = new System.Drawing.Size(345, 20);
             this.cBox.TabIndex = 17;
             // 
             // dBox
             // 
-            this.dBox.Location = new System.Drawing.Point(89, 147);
+            this.dBox.Location = new System.Drawing.Point(89, 175);
             this.dBox.Margin = new System.Windows.Forms.Padding(2);
             this.dBox.Name = "dBox";
-            this.dBox.Size = new System.Drawing.Size(282, 20);
+            this.dBox.Size = new System.Drawing.Size(345, 20);
             this.dBox.TabIndex = 18;
             // 
             // addQuestionGBox
@@ -204,7 +204,7 @@
             this.addQuestionGBox.Margin = new System.Windows.Forms.Padding(2);
             this.addQuestionGBox.Name = "addQuestionGBox";
             this.addQuestionGBox.Padding = new System.Windows.Forms.Padding(2);
-            this.addQuestionGBox.Size = new System.Drawing.Size(517, 277);
+            this.addQuestionGBox.Size = new System.Drawing.Size(565, 342);
             this.addQuestionGBox.TabIndex = 3;
             this.addQuestionGBox.TabStop = false;
             this.addQuestionGBox.Text = "Add A Question";
@@ -213,11 +213,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 292);
+            this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.addQuestionGBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "preTest";
-            this.Text = "Pre-Test Creator";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Pre-Test";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.preTest_FormClosed);
             this.addQuestionGBox.ResumeLayout(false);
             this.addQuestionGBox.PerformLayout();
