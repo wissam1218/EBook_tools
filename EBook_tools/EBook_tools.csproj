@@ -49,23 +49,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LessonCreator.cs">
+    <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LessonCreator.Designer.cs">
-      <DependentUpon>LessonCreator.cs</DependentUpon>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="TestCreatorWindow.cs">
+    <Compile Include="IMGreader.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TestCreatorWindow.Designer.cs">
-      <DependentUpon>TestCreatorWindow.cs</DependentUpon>
+    <Compile Include="IMGreader.Designer.cs">
+      <DependentUpon>IMGreader.cs</DependentUpon>
     </Compile>
-    <Compile Include="OpeningPage.cs">
+    <Compile Include="VIDreader.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OpeningPage.Designer.cs">
-      <DependentUpon>OpeningPage.cs</DependentUpon>
+    <Compile Include="VIDreader.Designer.cs">
+      <DependentUpon>VIDreader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LessonMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LessonMaker.Designer.cs">
+      <DependentUpon>LessonMaker.cs</DependentUpon>
     </Compile>
     <Compile Include="PDFView.cs">
       <SubType>Form</SubType>
@@ -93,14 +99,17 @@
     <Compile Include="TXTreader.Designer.cs">
       <DependentUpon>TXTreader.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="LessonCreator.resx">
-      <DependentUpon>LessonCreator.cs</DependentUpon>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TestCreatorWindow.resx">
-      <DependentUpon>TestCreatorWindow.cs</DependentUpon>
+    <EmbeddedResource Include="IMGreader.resx">
+      <DependentUpon>IMGreader.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OpeningPage.resx">
-      <DependentUpon>OpeningPage.cs</DependentUpon>
+    <EmbeddedResource Include="VIDreader.resx">
+      <DependentUpon>VIDreader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LessonMaker.resx">
+      <DependentUpon>LessonMaker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PDFView.resx">
       <DependentUpon>PDFView.cs</DependentUpon>

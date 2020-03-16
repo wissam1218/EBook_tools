@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EBook_tools
 {
-    public partial class CreateTest : Form
+    public partial class VIDreader : Form
     {
-        public CreateTest()
+        public VIDreader()
         {
             InitializeComponent();
         }
@@ -43,7 +43,7 @@ namespace EBook_tools
         private void BackBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-            LessonCreator lc = new LessonCreator();
+            IMGreader lc = new IMGreader();
             lc.Show();
 
         }
