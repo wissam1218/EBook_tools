@@ -75,13 +75,14 @@
             // 
             // buildBtn
             // 
-            this.buildBtn.Location = new System.Drawing.Point(454, 317);
+            this.buildBtn.Location = new System.Drawing.Point(327, 314);
             this.buildBtn.Margin = new System.Windows.Forms.Padding(2);
             this.buildBtn.Name = "buildBtn";
             this.buildBtn.Size = new System.Drawing.Size(107, 21);
             this.buildBtn.TabIndex = 14;
             this.buildBtn.Text = "&Build and Close";
             this.buildBtn.UseVisualStyleBackColor = true;
+            this.buildBtn.Click += new System.EventHandler(this.buildBtn_Click);
             // 
             // addBtn
             // 
@@ -202,19 +203,6 @@
             this.qLbl.TabIndex = 0;
             this.qLbl.Text = "Question";
             // 
-
-            // buildBtn
-            // 
-            this.buildBtn.Location = new System.Drawing.Point(395, 225);
-            this.buildBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.buildBtn.Name = "buildBtn";
-            this.buildBtn.Size = new System.Drawing.Size(107, 21);
-            this.buildBtn.TabIndex = 14;
-            this.buildBtn.Text = "&Build and Close";
-            this.buildBtn.UseVisualStyleBackColor = true;
-            this.buildBtn.Click += new System.EventHandler(this.buildBtn_Click);
-            // 
-
             // postTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

@@ -47,5 +47,34 @@ namespace EBook_tools
             lc.Show();
 
         }
+
+        private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vidChooseFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openVideoFile = new OpenFileDialog();
+
+            if (openVideoFile.ShowDialog() == System.Windows.Forms.DialogResult.OK) {
+                axWindowsMediaPlayer1.URL = openVideoFile.FileName;
+            }
+        }
+
+        private void vidPlay_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.play();
+        }
+
+        private void vidStop_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.stop();
+        }
+
+        private void vidPause_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayer1.Ctlcontrols.pause();
+        }
     }
 }
