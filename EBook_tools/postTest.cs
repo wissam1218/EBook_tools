@@ -3,53 +3,50 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using System.Threading;
 
 namespace EBook_tools
 {
-    public partial class preTest : Form
+    public partial class postTest : Form
     {
         public static int numOfFiles = 1;
         public static int count = 1;
-       TextWriter tw = new StreamWriter("preTest"+numOfFiles+".txt", true);
-        
-public preTest()
+        TextWriter tw = new StreamWriter("postTest"+numOfFiles+".txt", true);
+
+        public postTest()
         {
-       
             InitializeComponent();
-            // tw.WriteLine("PRE-TEST\r\n");
-            // qLbl.Text = "Question #" + count;
-            qBox.Text = "Enter question #" + count + " here";
+           // tw.WriteLine("POST-TEST\r\n");
+           // qLbl.Text = "Question #" + count;
+            qBox.Text = "Enter question #"+count+" here";
             aBox.Text = "Choice";
             bBox.Text = "Choice";
             cBox.Text = "Choice";
             dBox.Text = "Answer";
             ansBox.Text = "Answer";
         }
-
-        private void addBtn_Click(object sender, EventArgs e)
+        public void addBtn_Click(object sender, EventArgs e)
         {
-            // tw.WriteLine("Question #"+count);
-            tw.WriteLine("$" + this.qBox.Text + ">");
-            tw.WriteLine("&" + this.aBox.Text);
-            tw.WriteLine("!" + this.bBox.Text);
-            tw.WriteLine("*" + this.cBox.Text);
-            tw.WriteLine("@" + this.dBox.Text);
+           // tw.WriteLine("Question #" + count);
+            tw.WriteLine("$"+this.qBox.Text+">");
+            tw.WriteLine("&"+this.aBox.Text);
+            tw.WriteLine("!"+this.bBox.Text);
+            tw.WriteLine("*"+this.cBox.Text);
+            tw.WriteLine("@"+this.dBox.Text);
             tw.WriteLine("." + this.ansBox.Text);
-            // tw.WriteLine("~~~~~~~~~~~~~~~");
+          //  tw.WriteLine("~~~~~~~~~~~~~~~");
             qBox.Clear();
             aBox.Clear();
             bBox.Clear();
             cBox.Clear();
             dBox.Clear();
             ansBox.Clear();
-
-            qBox.Text = "What is question #: " + (count + 1).ToString();
+            
+            qBox.Text = "What is question #: " + (count+1).ToString();
             aBox.Text = "Choice";
             bBox.Text = "Choice";
             cBox.Text = "Choice";
@@ -64,11 +61,18 @@ public preTest()
             tw.Close();
             this.Close();
         }
-        private void preTest_FormClosed(object sender, FormClosedEventArgs e)
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+        private void postTest_FormClosed(object sender, FormClosedEventArgs e)
         {
             count = 1;
             numOfFiles++;
             tw.Close();
         }
+
+    
     }
 }

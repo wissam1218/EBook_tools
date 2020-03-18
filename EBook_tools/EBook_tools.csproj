@@ -49,23 +49,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="IMGreader.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="IMGreader.Designer.cs">
+      <DependentUpon>IMGreader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIDreader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIDreader.Designer.cs">
+      <DependentUpon>VIDreader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LessonMaker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LessonMaker.Designer.cs">
+      <DependentUpon>LessonMaker.cs</DependentUpon>
     </Compile>
     <Compile Include="PDFView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PDFView.Designer.cs">
       <DependentUpon>PDFView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="postTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="postTest.Designer.cs">
+      <DependentUpon>postTest.cs</DependentUpon>
     </Compile>
     <Compile Include="preTest.cs">
       <SubType>Form</SubType>
@@ -75,14 +93,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="TXTreader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TXTreader.Designer.cs">
+      <DependentUpon>TXTreader.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="IMGreader.resx">
+      <DependentUpon>IMGreader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIDreader.resx">
+      <DependentUpon>VIDreader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LessonMaker.resx">
+      <DependentUpon>LessonMaker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PDFView.resx">
       <DependentUpon>PDFView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="postTest.resx">
+      <DependentUpon>postTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="preTest.resx">
       <DependentUpon>preTest.cs</DependentUpon>
@@ -96,6 +129,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TXTreader.resx">
+      <DependentUpon>TXTreader.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -127,6 +163,23 @@
       <Lcid>0</Lcid>
       <WrapperTool>aximp</WrapperTool>
       <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

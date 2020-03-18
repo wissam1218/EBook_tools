@@ -10,22 +10,18 @@ using System.Windows.Forms;
 
 namespace EBook_tools
 {
-    public partial class Form2 : Form
+    public partial class MainPage : Form
     {
-        public Form2()
+        public MainPage()
         {
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void curriculumToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            preTest pre = new preTest();
-            pre.Show();
+            LessonMaker lm = new LessonMaker();
+            lm.Show();
+            this.Hide();
         }
     }
 }
