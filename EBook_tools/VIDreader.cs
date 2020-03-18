@@ -47,12 +47,13 @@ namespace EBook_tools
             lc.Show();
 
         }
-
+        //this is our video container, the method name must match the name on the container or you will get a catastophic failure.
+        //this empty method is attached to the media player object and acts as an empty container for the actual video.
         private void axWindowsMediaPlayer1_Enter(object sender, EventArgs e)
         {
 
         }
-
+        //we choose our video file with this method and open that file for our media player.
         private void vidChooseFile_Click(object sender, EventArgs e)
         {
             OpenFileDialog openVideoFile = new OpenFileDialog();
@@ -61,20 +62,25 @@ namespace EBook_tools
                 axWindowsMediaPlayer1.URL = openVideoFile.FileName;
             }
         }
-
+        //this is to play the video
         private void vidPlay_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.play();
         }
-
+        //this is to stop the video
         private void vidStop_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.stop();
         }
-
+        //this will pause our video
         private void vidPause_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.pause();
+        }
+
+        private void vidConfirm_Click(object sender, EventArgs e)
+        {
+            //to be implemented later to add to our export file.
         }
     }
 }

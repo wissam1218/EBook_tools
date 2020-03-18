@@ -113,6 +113,7 @@
             this.vidConfirm.TabIndex = 4;
             this.vidConfirm.Text = "Confirm";
             this.vidConfirm.UseVisualStyleBackColor = true;
+            this.vidConfirm.Click += new System.EventHandler(this.vidConfirm_Click);
             // 
             // axWindowsMediaPlayer1
             // 
