@@ -141,6 +141,5 @@ namespace EBook_tools
         {
             tr = null;
         }
-        
     }
 }
