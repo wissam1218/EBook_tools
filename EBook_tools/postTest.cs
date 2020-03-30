@@ -19,7 +19,7 @@ namespace EBook_tools
 
 
         
-        TextWriter tw = new StreamWriter("C:/tests/postTests/postTest" + numOfFiles+".txt", true);
+        TextWriter tw = new StreamWriter("C:/EBook_tools/tests/postTests/postTest" + numOfFiles+".txt", true);
 
         // Initialize the text boxes
         public postTest()

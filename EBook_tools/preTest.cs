@@ -16,7 +16,7 @@ namespace EBook_tools
     {
         public static int numOfFiles = 1;
         public static int count = 1;
-       TextWriter tw = new StreamWriter("C:/tests/preTests/preTest" + numOfFiles+".txt", true);
+       TextWriter tw = new StreamWriter("C:/EBook_tools/tests/preTests/preTest" + numOfFiles+".txt", true);
         
 public preTest()
         {
