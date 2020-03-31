@@ -12,6 +12,8 @@ namespace EBook_tools
 {
     public partial class PDFView : Form
     {
+        string cdir;
+        string lesson;
         public PDFView()
         {
             InitializeComponent();
@@ -34,6 +36,11 @@ namespace EBook_tools
                 pdf.LoadFile(open.FileName);
             }
 
+        }
+        public void changeDir(string newDir, string newLesson)
+        {
+            cdir = newDir;
+            lesson = newLesson;
         }
     }
 }

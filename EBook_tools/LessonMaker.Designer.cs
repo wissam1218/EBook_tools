@@ -29,14 +29,16 @@
         private void InitializeComponent()
         {
             this.lessonMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.addToLessonMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.addPreTestToLesson = new System.Windows.Forms.ToolStripMenuItem();
-            this.addPostTestToLesson = new System.Windows.Forms.ToolStripMenuItem();
-            this.addPDFToLesson = new System.Windows.Forms.ToolStripMenuItem();
-            this.addImageToLesson = new System.Windows.Forms.ToolStripMenuItem();
-            this.addVideoToLesson = new System.Windows.Forms.ToolStripMenuItem();
-            this.addTextFileToLesson = new System.Windows.Forms.ToolStripMenuItem();
-            this.openLessonFileMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.chooseLessonTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.newLessonTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.existingLessonTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToLessonTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.addPreTestToLessonTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.addPostTestToLessonTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.addPDFToLessonTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.addImageToLessonTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.addVideoToLessonTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.addTextFileToLessonTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.mainMenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -44,72 +46,89 @@
             // lessonMI
             // 
             this.lessonMI.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addToLessonMI,
-            this.openLessonFileMI});
+            this.chooseLessonTSMI,
+            this.addToLessonTSMI});
             this.lessonMI.Name = "lessonMI";
             this.lessonMI.Size = new System.Drawing.Size(55, 20);
             this.lessonMI.Text = "Lesson";
             // 
-            // addToLessonMI
+            // chooseLessonTSMI
             // 
-            this.addToLessonMI.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addPreTestToLesson,
-            this.addPostTestToLesson,
-            this.addPDFToLesson,
-            this.addImageToLesson,
-            this.addVideoToLesson,
-            this.addTextFileToLesson});
-            this.addToLessonMI.Name = "addToLessonMI";
-            this.addToLessonMI.Size = new System.Drawing.Size(103, 22);
-            this.addToLessonMI.Text = "Add";
+            this.chooseLessonTSMI.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newLessonTSMI,
+            this.existingLessonTSMI});
+            this.chooseLessonTSMI.Name = "chooseLessonTSMI";
+            this.chooseLessonTSMI.Size = new System.Drawing.Size(180, 22);
+            this.chooseLessonTSMI.Text = "Choose";
             // 
-            // addPreTestToLesson
+            // newLessonTSMI
             // 
-            this.addPreTestToLesson.Name = "addPreTestToLesson";
-            this.addPreTestToLesson.Size = new System.Drawing.Size(125, 22);
-            this.addPreTestToLesson.Text = "Pre-Test";
-            this.addPreTestToLesson.Click += new System.EventHandler(this.addPreTestToLesson_Click);
+            this.newLessonTSMI.Name = "newLessonTSMI";
+            this.newLessonTSMI.Size = new System.Drawing.Size(180, 22);
+            this.newLessonTSMI.Text = "New";
+            this.newLessonTSMI.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
-            // addPostTestToLesson
+            // existingLessonTSMI
             // 
-            this.addPostTestToLesson.Name = "addPostTestToLesson";
-            this.addPostTestToLesson.Size = new System.Drawing.Size(125, 22);
-            this.addPostTestToLesson.Text = "Post- Test";
-            this.addPostTestToLesson.Click += new System.EventHandler(this.addPostTestToLesson_Click);
+            this.existingLessonTSMI.Name = "existingLessonTSMI";
+            this.existingLessonTSMI.Size = new System.Drawing.Size(180, 22);
+            this.existingLessonTSMI.Text = "Existing";
+            this.existingLessonTSMI.Click += new System.EventHandler(this.existingToolStripMenuItem_Click);
             // 
-            // addPDFToLesson
+            // addToLessonTSMI
             // 
-            this.addPDFToLesson.Name = "addPDFToLesson";
-            this.addPDFToLesson.Size = new System.Drawing.Size(125, 22);
-            this.addPDFToLesson.Text = "PDF";
-            this.addPDFToLesson.Click += new System.EventHandler(this.addPDFToLesson_Click);
+            this.addToLessonTSMI.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addPreTestToLessonTSMI,
+            this.addPostTestToLessonTSMI,
+            this.addPDFToLessonTSMI,
+            this.addImageToLessonTSMI,
+            this.addVideoToLessonTSMI,
+            this.addTextFileToLessonTSMI});
+            this.addToLessonTSMI.Name = "addToLessonTSMI";
+            this.addToLessonTSMI.Size = new System.Drawing.Size(180, 22);
+            this.addToLessonTSMI.Text = "Add";
             // 
-            // addImageToLesson
+            // addPreTestToLessonTSMI
             // 
-            this.addImageToLesson.Name = "addImageToLesson";
-            this.addImageToLesson.Size = new System.Drawing.Size(125, 22);
-            this.addImageToLesson.Text = "Image";
-            this.addImageToLesson.Click += new System.EventHandler(this.addImageToLesson_Click);
+            this.addPreTestToLessonTSMI.Name = "addPreTestToLessonTSMI";
+            this.addPreTestToLessonTSMI.Size = new System.Drawing.Size(180, 22);
+            this.addPreTestToLessonTSMI.Text = "Pre-Test";
+            this.addPreTestToLessonTSMI.Click += new System.EventHandler(this.addPreTestToLesson_Click);
             // 
-            // addVideoToLesson
+            // addPostTestToLessonTSMI
             // 
-            this.addVideoToLesson.Name = "addVideoToLesson";
-            this.addVideoToLesson.Size = new System.Drawing.Size(125, 22);
-            this.addVideoToLesson.Text = "Video";
-            this.addVideoToLesson.Click += new System.EventHandler(this.addVideoToLesson_Click);
+            this.addPostTestToLessonTSMI.Name = "addPostTestToLessonTSMI";
+            this.addPostTestToLessonTSMI.Size = new System.Drawing.Size(180, 22);
+            this.addPostTestToLessonTSMI.Text = "Post- Test";
+            this.addPostTestToLessonTSMI.Click += new System.EventHandler(this.addPostTestToLesson_Click);
             // 
-            // addTextFileToLesson
+            // addPDFToLessonTSMI
             // 
-            this.addTextFileToLesson.Name = "addTextFileToLesson";
-            this.addTextFileToLesson.Size = new System.Drawing.Size(125, 22);
-            this.addTextFileToLesson.Text = "Text";
-            this.addTextFileToLesson.Click += new System.EventHandler(this.addTextFileToLesson_Click);
+            this.addPDFToLessonTSMI.Name = "addPDFToLessonTSMI";
+            this.addPDFToLessonTSMI.Size = new System.Drawing.Size(180, 22);
+            this.addPDFToLessonTSMI.Text = "PDF";
+            this.addPDFToLessonTSMI.Click += new System.EventHandler(this.addPDFToLesson_Click);
             // 
-            // openLessonFileMI
+            // addImageToLessonTSMI
             // 
-            this.openLessonFileMI.Name = "openLessonFileMI";
-            this.openLessonFileMI.Size = new System.Drawing.Size(103, 22);
-            this.openLessonFileMI.Text = "Open";
+            this.addImageToLessonTSMI.Name = "addImageToLessonTSMI";
+            this.addImageToLessonTSMI.Size = new System.Drawing.Size(180, 22);
+            this.addImageToLessonTSMI.Text = "Image";
+            this.addImageToLessonTSMI.Click += new System.EventHandler(this.addImageToLesson_Click);
+            // 
+            // addVideoToLessonTSMI
+            // 
+            this.addVideoToLessonTSMI.Name = "addVideoToLessonTSMI";
+            this.addVideoToLessonTSMI.Size = new System.Drawing.Size(180, 22);
+            this.addVideoToLessonTSMI.Text = "Video";
+            this.addVideoToLessonTSMI.Click += new System.EventHandler(this.addVideoToLesson_Click);
+            // 
+            // addTextFileToLessonTSMI
+            // 
+            this.addTextFileToLessonTSMI.Name = "addTextFileToLessonTSMI";
+            this.addTextFileToLessonTSMI.Size = new System.Drawing.Size(180, 22);
+            this.addTextFileToLessonTSMI.Text = "Text";
+            this.addTextFileToLessonTSMI.Click += new System.EventHandler(this.addTextFileToLesson_Click);
             // 
             // mainMenuStrip
             // 
@@ -146,14 +165,16 @@
         #endregion
         private System.Windows.Forms.ToolStripMenuItem exportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lessonMI;
-        private System.Windows.Forms.ToolStripMenuItem addToLessonMI;
-        private System.Windows.Forms.ToolStripMenuItem openLessonFileMI;
+        private System.Windows.Forms.ToolStripMenuItem addToLessonTSMI;
         private System.Windows.Forms.MenuStrip mainMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem addPreTestToLesson;
-        private System.Windows.Forms.ToolStripMenuItem addPostTestToLesson;
-        private System.Windows.Forms.ToolStripMenuItem addPDFToLesson;
-        private System.Windows.Forms.ToolStripMenuItem addImageToLesson;
-        private System.Windows.Forms.ToolStripMenuItem addVideoToLesson;
-        private System.Windows.Forms.ToolStripMenuItem addTextFileToLesson;
+        private System.Windows.Forms.ToolStripMenuItem addPreTestToLessonTSMI;
+        private System.Windows.Forms.ToolStripMenuItem addPostTestToLessonTSMI;
+        private System.Windows.Forms.ToolStripMenuItem addPDFToLessonTSMI;
+        private System.Windows.Forms.ToolStripMenuItem addImageToLessonTSMI;
+        private System.Windows.Forms.ToolStripMenuItem addVideoToLessonTSMI;
+        private System.Windows.Forms.ToolStripMenuItem addTextFileToLessonTSMI;
+        private System.Windows.Forms.ToolStripMenuItem chooseLessonTSMI;
+        private System.Windows.Forms.ToolStripMenuItem newLessonTSMI;
+        private System.Windows.Forms.ToolStripMenuItem existingLessonTSMI;
     }
 }
