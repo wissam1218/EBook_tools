@@ -20,8 +20,10 @@ namespace EBook_tools
         string lesson;
         public static int numOfFiles = 1;
         public static int count = 1;
+
         TextWriter tw;
         public preTest()
+
         {
             InitializeComponent();
            // tw.WriteLine("PRE-TEST\r\n");
