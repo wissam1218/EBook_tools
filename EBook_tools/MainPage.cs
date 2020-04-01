@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ namespace EBook_tools
 {
     public partial class MainPageform : Form
     {
+
         string cdir = Environment.CurrentDirectory;
         string className = null;
         string[] environmentArray = null;
@@ -41,6 +43,7 @@ namespace EBook_tools
             lm.FormClosed += new FormClosedEventHandler(lm_FormClosed);
             this.Hide();
         }
+
 
         private void lm_FormClosed(object sender, FormClosedEventArgs e)
         {
