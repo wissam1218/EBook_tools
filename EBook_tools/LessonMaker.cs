@@ -12,6 +12,11 @@ namespace EBook_tools
 {
     public partial class LessonMaker : Form
     {
+        string cdir = null;
+        public string className = null;
+        string lesson = null;
+        int count = 0;
+        String[] environmentArray;
         public LessonMaker()
         {
             InitializeComponent();
@@ -19,7 +24,13 @@ namespace EBook_tools
 
         private void OpeningPage_Load(object sender, EventArgs e)
         {
-            //??
+            count = System.IO.Directory.GetDirectories(cdir).Length;
+            this.Text += count;
+            addToLessonTSMI.Visible = false;
+            if(count == 0)
+            {
+                existingLessonTSMI.Enabled = false;
+            }
         }
 
         preTest pret;
@@ -31,12 +42,15 @@ namespace EBook_tools
                 pret.MdiParent = this;
                 pret.FormClosed += new FormClosedEventHandler(pret_FormClosed);
                 pret.Show();
+                //Passes the directory with changes so the form can correctly save to a folder
+                pret.changeDir(cdir + "\\" + lesson,lesson);
             }
             else
             {
                 pret.Activate();
             }
         }
+
         void pret_FormClosed(object sender, FormClosedEventArgs e)
         {
             pret = null;
@@ -51,12 +65,14 @@ namespace EBook_tools
                 post.MdiParent = this;
                 post.FormClosed += new FormClosedEventHandler(post_FormClosed);
                 post.Show();
+                post.changeDir(cdir + "\\" + lesson,lesson);
             }
             else
             {
                 post.Activate();
             }
         }
+
         void post_FormClosed(object sender, FormClosedEventArgs e)
         {
             post = null;
@@ -71,12 +87,14 @@ namespace EBook_tools
                 pdfv.MdiParent = this;
                 pdfv.FormClosed += new FormClosedEventHandler(pdfv_FormClosed);
                 pdfv.Show();
+                pdfv.changeDir(cdir+"\\"+lesson,lesson);
             }
             else
             {
                 pdfv.Activate();
             }
         }
+
         void pdfv_FormClosed(object sender, FormClosedEventArgs e)
         {
             pdfv = null;
@@ -91,12 +109,14 @@ namespace EBook_tools
                 img.MdiParent = this;
                 img.FormClosed += new FormClosedEventHandler(img_FormClosed);
                 img.Show();
+                img.changeDir(cdir + "\\" + lesson,lesson);
             }
             else
             {
                 img.Activate();
             }
         }
+
         void img_FormClosed(object sender, FormClosedEventArgs e)
         {
             img = null;
@@ -111,12 +131,14 @@ namespace EBook_tools
                 vr.MdiParent = this;
                 vr.FormClosed += new FormClosedEventHandler(vr_FormClosed);
                 vr.Show();
+                vr.changeDir(cdir + "\\" + lesson, lesson);
             }
             else
             {
                 vr.Activate();
             }
         }
+
         void vr_FormClosed(object sender, FormClosedEventArgs e)
         {
             vr = null;
@@ -131,16 +153,57 @@ namespace EBook_tools
                 tr.MdiParent = this;
                 tr.FormClosed += new FormClosedEventHandler(tr_FormClosed);
                 tr.Show();
+                tr.changeDir(cdir + "\\" + lesson, lesson);
             }
             else
             {
                 tr.Activate();
             }
         }
+
         void tr_FormClosed(object sender, FormClosedEventArgs e)
         {
             tr = null;
         }
-        
+
+
+        //New code pertaining to the file system
+        public void changedir(string newdir)
+        {
+            cdir = newdir;
+        }
+
+        private void existingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderDlg = new FolderBrowserDialog
+            {
+                ShowNewFolderButton = false,
+                SelectedPath = cdir
+            };
+            // Show the FolderBrowserDialog.  
+            DialogResult result = folderDlg.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                Environment.SpecialFolder root = folderDlg.RootFolder;
+            }
+            String[] separator = { "\\" };
+            environmentArray = folderDlg.SelectedPath.ToString().Split(separator, 32, StringSplitOptions.RemoveEmptyEntries);
+            lesson = environmentArray[environmentArray.Length - 1];
+            this.Text = "Class: " + className + " | Total Lessons: "+count +" | Chosen Lesson: "+lesson;
+            addToLessonTSMI.Visible = true;
+        }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            count++;
+            System.IO.Directory.CreateDirectory(cdir + "\\Lesson "+count);
+            lesson = "Lesson " + count;
+            this.Text = "Class: " + className + " | Total Lessons: " + count+" | Chosen Lesson: " + lesson;
+            addToLessonTSMI.Visible = true;
+            if (!existingLessonTSMI.Enabled)
+            {
+                existingLessonTSMI.Enabled = true;
+            }
+        }
     }
 }

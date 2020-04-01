@@ -12,6 +12,8 @@ namespace EBook_tools
 {
     public partial class VIDreader : Form
     {
+        string cdir;
+        string lesson;
         public VIDreader()
         {
             InitializeComponent();
@@ -81,6 +83,11 @@ namespace EBook_tools
         private void vidConfirm_Click(object sender, EventArgs e)
         {
             //to be implemented later to add to our export file.
+        }
+        public void changeDir(string newDir, string newLesson)
+        {
+            cdir = newDir;
+            lesson = newLesson;
         }
     }
 }

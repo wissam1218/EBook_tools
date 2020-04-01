@@ -12,6 +12,8 @@ namespace EBook_tools
 {
     public partial class IMGreader : Form
     {
+        string cdir;
+        string lesson;
         public IMGreader()
         {
             
@@ -75,6 +77,11 @@ namespace EBook_tools
         {
             //this picture box is where the image gets loaded, it remains empty as an image is going to take place here
             //if we wanted we could add some events inside this picture box if someone were to click inside it for example
+        }
+        public void changeDir(string newDir, string newLesson)
+        {
+            cdir = newDir;
+            lesson = newLesson;
         }
     }
 }

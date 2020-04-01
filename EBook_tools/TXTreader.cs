@@ -13,7 +13,8 @@ namespace EBook_tools
 {
     public partial class TXTreader : Form
     {
-        
+        string cdir;
+        string lesson;
         public TXTreader()
         {
             InitializeComponent();
@@ -45,6 +46,11 @@ namespace EBook_tools
             }
 
 
+        }
+        public void changeDir(string newDir, string newLesson)
+        {
+            cdir = newDir;
+            lesson = newLesson;
         }
     }
 }

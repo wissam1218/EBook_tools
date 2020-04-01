@@ -8,47 +8,85 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace EBook_tools
 {
-    public partial class MainPage : Form
+    public partial class MainPageform : Form
     {
-        // this is how the current file structur is designed 
-        public static String root = "C:/EBook_tools";
-        public static String pdf = "C:/EBook_tools/pdf";
-        public static String test = "C:/EBook_tools/tests";
-        public static String prePath = "C:/EBook_tools/tests/preTests";
-        public static String postPath = "C:/EBook_tools/tests/postTests";
-        public MainPage() 
+
+        string cdir = Environment.CurrentDirectory;
+        string className = null;
+        string[] environmentArray = null;
+        public MainPageform()
         {
             InitializeComponent();
-            // if the various folders are not found on the c drive then create it
-            if (!Directory.Exists(pdf))
-            {
-                Directory.CreateDirectory(pdf);
-            }
-            if (!Directory.Exists(test))
-            {
-                Directory.CreateDirectory(test);
-            }
-            if (!Directory.Exists(prePath))
-            {
-                Directory.CreateDirectory(prePath);
-            }
-            if (!Directory.Exists(postPath)){
-                Directory.CreateDirectory(postPath);
-            }
+            System.Diagnostics.Debug.WriteLine("Current Folder: " +cdir);
+            cdir = cdir + "\\Classrooms";
+            System.IO.Directory.CreateDirectory(cdir);
+            editClassTSMI.Visible = false;
+
         }
 
-        private void curriculumToolStripMenuItem_Click(object sender, EventArgs e)
+
+        LessonMaker lm;
+        private void editClassTSMI_Click(object sender, EventArgs e)
         {
-            LessonMaker lm = new LessonMaker();
+            lm = new LessonMaker();
+            lm.changedir(cdir+"\\"+className+"\\Curriculum");
+            lm.Text = "Class: " + className+ " | Total Lessons: ";
+            lm.className = this.className;
             lm.Show();
+            lm.FormClosed += new FormClosedEventHandler(lm_FormClosed);
             this.Hide();
         }
 
-        private void MainPage_Load(object sender, EventArgs e)
+
+        private void lm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            lm = null;
+            this.Show();
+        }
+
+        //New code pertaining to the file system
+        private void existingClassroomTSMI_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderDlg = new FolderBrowserDialog
+            {
+                ShowNewFolderButton = false,
+                RootFolder = Environment.SpecialFolder.MyComputer,
+                Description = "Select a folder within Classrooms.",
+                SelectedPath = cdir
+
+            };
+            // Show the FolderBrowserDialog.  
+            DialogResult result = folderDlg.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                Environment.SpecialFolder root = folderDlg.RootFolder;
+            }
+            String[] separator = { "\\" };
+            environmentArray = folderDlg.SelectedPath.ToString().Split(separator, 32, StringSplitOptions.RemoveEmptyEntries);
+            className = environmentArray[environmentArray.Length-1];
+            this.Text = "Current Selected Class: " + className;
+            editClassTSMI.Visible = true;
+        }
+
+        private void newClassroomTSMI_Click(object sender, EventArgs e)
+        {
+            String inputvalue = Microsoft.VisualBasic.Interaction.InputBox("Choose a Classroom Name", "", "[Enter Name Here]", -1, -1);
+            if (inputvalue != ""&&inputvalue != "[Enter Name Here]")
+            {
+                String newClassroom = cdir + "\\" + inputvalue;
+                if (!System.IO.Directory.Exists(newClassroom))
+                {
+                    System.IO.Directory.CreateDirectory(newClassroom + "\\Students");
+                    System.IO.Directory.CreateDirectory(newClassroom + "\\Curriculum");
+                }
+            }
+            className = inputvalue;
+            this.Text = "Current Selected Class: " + className;
+            editClassTSMI.Visible = true;
 
         }
     }
