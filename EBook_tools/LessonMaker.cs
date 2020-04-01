@@ -195,7 +195,7 @@ namespace EBook_tools
             else
             {
                 lesson = environmentArray[environmentArray.Length - 1];
-                if (environmentArray[environmentArray.Length - 2] == className)
+                if (environmentArray[environmentArray.Length - 2] == "Curriculum"&& environmentArray[environmentArray.Length - 3]== className)
                 { 
                     this.Text = "Class: " + className + " | Total Lessons: " + count + " | Chosen Lesson: " + lesson;
                     addToLessonTSMI.Visible = true;
