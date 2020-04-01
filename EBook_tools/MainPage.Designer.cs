@@ -1,6 +1,6 @@
 ﻿namespace EBook_tools
 {
-    partial class MainPage
+    partial class MainPageform
     {
         /// <summary>
         /// Required designer variable.
@@ -29,71 +29,104 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.classroomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.curriculumToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.classTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.chooseClassTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.newClassroomTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.existingClassroomTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.editClassTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.editStudentTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.editCurriculumTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.classroomToolStripMenuItem});
+            this.classTSMI});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(607, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(910, 35);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // classroomToolStripMenuItem
+            // classTSMI
             // 
-            this.classroomToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editToolStripMenuItem,
-            this.editToolStripMenuItem1});
-            this.classroomToolStripMenuItem.Name = "classroomToolStripMenuItem";
-            this.classroomToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.classroomToolStripMenuItem.Text = "Classroom";
+
+            this.classTSMI.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.chooseClassTSMI,
+            this.editClassTSMI});
+            this.classTSMI.Name = "classTSMI";
+            this.classTSMI.Size = new System.Drawing.Size(75, 20);
+            this.classTSMI.Text = "Classroom";
+
             // 
-            // editToolStripMenuItem
+            // chooseClassTSMI
             // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
-            this.editToolStripMenuItem.Text = "Create";
+
+            this.chooseClassTSMI.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newClassroomTSMI,
+            this.existingClassroomTSMI});
+            this.chooseClassTSMI.Name = "chooseClassTSMI";
+            this.chooseClassTSMI.Size = new System.Drawing.Size(114, 22);
+            this.chooseClassTSMI.Text = "Choose";
             // 
-            // editToolStripMenuItem1
+            // newClassroomTSMI
             // 
-            this.editToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.studentToolStripMenuItem,
-            this.curriculumToolStripMenuItem});
-            this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
-            this.editToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.editToolStripMenuItem1.Text = "Edit";
+
+            this.newClassroomTSMI.Name = "newClassroomTSMI";
+            this.newClassroomTSMI.Size = new System.Drawing.Size(115, 22);
+            this.newClassroomTSMI.Text = "New";
+            this.newClassroomTSMI.Click += new System.EventHandler(this.newClassroomTSMI_Click);
+
             // 
-            // studentToolStripMenuItem
+            // existingClassroomTSMI
             // 
-            this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            this.studentToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
-            this.studentToolStripMenuItem.Text = "Student";
+
+            this.existingClassroomTSMI.Name = "existingClassroomTSMI";
+            this.existingClassroomTSMI.Size = new System.Drawing.Size(115, 22);
+            this.existingClassroomTSMI.Text = "Existing";
+            this.existingClassroomTSMI.Click += new System.EventHandler(this.existingClassroomTSMI_Click);
+
             // 
-            // curriculumToolStripMenuItem
+            // editClassTSMI
             // 
-            this.curriculumToolStripMenuItem.Name = "curriculumToolStripMenuItem";
-            this.curriculumToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.curriculumToolStripMenuItem.Text = "Curriculum";
-            this.curriculumToolStripMenuItem.Click += new System.EventHandler(this.curriculumToolStripMenuItem_Click);
+
+            this.editClassTSMI.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editStudentTSMI,
+            this.editCurriculumTSMI});
+            this.editClassTSMI.Name = "editClassTSMI";
+            this.editClassTSMI.Size = new System.Drawing.Size(114, 22);
+            this.editClassTSMI.Text = "Edit";
+
             // 
-            // MainPage
+            // editStudentTSMI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.editStudentTSMI.Name = "editStudentTSMI";
+            this.editStudentTSMI.Size = new System.Drawing.Size(134, 22);
+            this.editStudentTSMI.Text = "Student";
+            // 
+            // editCurriculumTSMI
+            // 
+            this.editCurriculumTSMI.Name = "editCurriculumTSMI";
+            this.editCurriculumTSMI.Size = new System.Drawing.Size(134, 22);
+            this.editCurriculumTSMI.Text = "Curriculum";
+            this.editCurriculumTSMI.Click += new System.EventHandler(this.editClassTSMI_Click);
+            // 
+            // MainPageform
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(607, 369);
+            this.ClientSize = new System.Drawing.Size(910, 568);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "MainPage";
-            this.Text = "Welcome!";
+
+            this.Name = "MainPageform";
+            this.Text = "Welcome! Current Selected Class: None";
+
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -104,10 +137,13 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem classroomToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem studentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem curriculumToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem classTSMI;
+        private System.Windows.Forms.ToolStripMenuItem chooseClassTSMI;
+        private System.Windows.Forms.ToolStripMenuItem editClassTSMI;
+        private System.Windows.Forms.ToolStripMenuItem editStudentTSMI;
+        private System.Windows.Forms.ToolStripMenuItem editCurriculumTSMI;
+        private System.Windows.Forms.ToolStripMenuItem existingClassroomTSMI;
+        private System.Windows.Forms.ToolStripMenuItem newClassroomTSMI;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }

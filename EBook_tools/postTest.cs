@@ -13,39 +13,43 @@ namespace EBook_tools
 {
     public partial class postTest : Form
     {
+        string cdir;
+        string lesson;
         public static int numOfFiles = 1;
         public static int count = 1;
-        TextWriter tw = new StreamWriter("postTest"+numOfFiles+".txt", true);
+
+        TextWriter tw;
 
         public postTest()
         {
             InitializeComponent();
-           // tw.WriteLine("POST-TEST\r\n");
-           // qLbl.Text = "Question #" + count;
             qBox.Text = "Enter question #"+count+" here";
             aBox.Text = "Choice";
             bBox.Text = "Choice";
             cBox.Text = "Choice";
             dBox.Text = "Answer";
             ansBox.Text = "Answer";
+            
         }
+        // adds the queestion set to the file aand clear for new text
         public void addBtn_Click(object sender, EventArgs e)
         {
-           // tw.WriteLine("Question #" + count);
+
+            tw = new StreamWriter(cdir + "\\postTest" + numOfFiles + ".txt", true);
+            // tw.WriteLine("Question #" + count);
+
             tw.WriteLine("$"+this.qBox.Text+">");
             tw.WriteLine("&"+this.aBox.Text);
             tw.WriteLine("!"+this.bBox.Text);
             tw.WriteLine("*"+this.cBox.Text);
             tw.WriteLine("@"+this.dBox.Text);
             tw.WriteLine("." + this.ansBox.Text);
-          //  tw.WriteLine("~~~~~~~~~~~~~~~");
             qBox.Clear();
             aBox.Clear();
             bBox.Clear();
             cBox.Clear();
             dBox.Clear();
             ansBox.Clear();
-            
             qBox.Text = "What is question #: " + (count+1).ToString();
             aBox.Text = "Choice";
             bBox.Text = "Choice";
@@ -53,12 +57,14 @@ namespace EBook_tools
             dBox.Text = "Answer";
             ansBox.Text = "Answer";
             count++;
-           // qLbl.Text = "Question #" + count;
+
+            // qLbl.Text = "Question #" + count;
+            tw.Close();
+
         }
 
         private void buildBtn_Click(object sender, EventArgs e)
         {
-            tw.Close();
             this.Close();
         }
 
@@ -70,9 +76,12 @@ namespace EBook_tools
         {
             count = 1;
             numOfFiles++;
-            tw.Close();
+        }
+        public void changeDir(string newDir, string newLesson)
+        {
+            cdir = newDir;
+            lesson = newLesson;
         }
 
-    
     }
 }
