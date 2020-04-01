@@ -24,13 +24,21 @@ namespace EBook_tools
 
         private void OpeningPage_Load(object sender, EventArgs e)
         {
-            count = System.IO.Directory.GetDirectories(cdir).Length;
-            this.Text += count;
-            addToLessonTSMI.Visible = false;
-            if(count == 0)
+            try
             {
-                existingLessonTSMI.Enabled = false;
+                count = System.IO.Directory.GetDirectories(cdir).Length;
+                this.Text += count;
+                addToLessonTSMI.Visible = false;
+                if (count == 0)
+                {
+                    existingLessonTSMI.Enabled = false;
+                }
             }
+            catch (Exception f)
+            {
+                Console.WriteLine(f.Message);
+            }
+            
         }
 
         preTest pret;
@@ -165,8 +173,6 @@ namespace EBook_tools
         {
             tr = null;
         }
-<<<<<<< HEAD
-=======
 
 
         //New code pertaining to the file system
@@ -221,6 +227,5 @@ namespace EBook_tools
                 existingLessonTSMI.Enabled = true;
             }
         }
->>>>>>> 4abe9cb58c314a72ba3b5604e85018c7628f404e
     }
 }

@@ -28,19 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TXTreader));
             this.openBtn = new System.Windows.Forms.Button();
             this.textLBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // openBtn
             // 
+            this.openBtn.BackColor = System.Drawing.SystemColors.ControlLight;
             this.openBtn.Location = new System.Drawing.Point(8, 8);
             this.openBtn.Margin = new System.Windows.Forms.Padding(2);
             this.openBtn.Name = "openBtn";
             this.openBtn.Size = new System.Drawing.Size(97, 27);
             this.openBtn.TabIndex = 2;
             this.openBtn.Text = "&Open File";
-            this.openBtn.UseVisualStyleBackColor = true;
+            this.openBtn.UseVisualStyleBackColor = false;
             this.openBtn.Click += new System.EventHandler(this.openBtn_Click);
             // 
             // textLBox
@@ -57,10 +59,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(584, 361);
             this.Controls.Add(this.textLBox);
             this.Controls.Add(this.openBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

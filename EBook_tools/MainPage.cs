@@ -109,5 +109,10 @@ namespace EBook_tools
                 existingClassroomTSMI.Enabled = true;
             }
         }
+
+        private void MainPageform_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
