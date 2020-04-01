@@ -23,6 +23,10 @@ namespace EBook_tools
             cdir = cdir + "\\Classrooms";
             System.IO.Directory.CreateDirectory(cdir);
             editClassTSMI.Visible = false;
+            if(System.IO.Directory.GetDirectories(cdir).Length==0)
+            {
+                existingClassroomTSMI.Enabled = false;
+            }
         }
 
 
@@ -63,9 +67,23 @@ namespace EBook_tools
             }
             String[] separator = { "\\" };
             environmentArray = folderDlg.SelectedPath.ToString().Split(separator, 32, StringSplitOptions.RemoveEmptyEntries);
-            className = environmentArray[environmentArray.Length-1];
-            this.Text = "Current Selected Class: " + className;
-            editClassTSMI.Visible = true;
+            if (environmentArray.Length <= 2)
+            {
+
+            }
+            else
+            {
+                className = environmentArray[environmentArray.Length - 1];
+                if (className == "Classrooms" || environmentArray[environmentArray.Length - 2] != "Classrooms")
+                {
+                    className = null;
+                }
+                else
+                {
+                    this.Text = "Current Selected Class: " + className;
+                    editClassTSMI.Visible = true;
+                }
+            }
         }
 
         private void newClassroomTSMI_Click(object sender, EventArgs e)
@@ -83,6 +101,10 @@ namespace EBook_tools
             className = inputvalue;
             this.Text = "Current Selected Class: " + className;
             editClassTSMI.Visible = true;
+            if (!existingClassroomTSMI.Enabled)
+            {
+                existingClassroomTSMI.Enabled = true;
+            }
         }
     }
 }

@@ -188,9 +188,23 @@ namespace EBook_tools
             }
             String[] separator = { "\\" };
             environmentArray = folderDlg.SelectedPath.ToString().Split(separator, 32, StringSplitOptions.RemoveEmptyEntries);
-            lesson = environmentArray[environmentArray.Length - 1];
-            this.Text = "Class: " + className + " | Total Lessons: "+count +" | Chosen Lesson: "+lesson;
-            addToLessonTSMI.Visible = true;
+            if (environmentArray.Length <= 2)
+            {
+
+            }
+            else
+            {
+                lesson = environmentArray[environmentArray.Length - 1];
+                if (environmentArray[environmentArray.Length - 2] == className)
+                { 
+                    this.Text = "Class: " + className + " | Total Lessons: " + count + " | Chosen Lesson: " + lesson;
+                    addToLessonTSMI.Visible = true;
+                }
+                else
+                {
+                    lesson = null;
+                }
+            }
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
