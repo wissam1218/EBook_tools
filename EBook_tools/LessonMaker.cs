@@ -15,6 +15,7 @@ namespace EBook_tools
         string cdir = null;
         public string className = null;
         string lesson = null;
+        String pdf = null;
         int count = 0;
         String[] environmentArray;
         public LessonMaker()

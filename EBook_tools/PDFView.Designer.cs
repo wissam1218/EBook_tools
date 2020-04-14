@@ -29,57 +29,59 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PDFView));
-            this.pdf = new AxAcroPDFLib.AxAcroPDF();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pdf)).BeginInit();
+            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pdf
-            // 
-            this.pdf.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pdf.Enabled = true;
-            this.pdf.Location = new System.Drawing.Point(0, 0);
-            this.pdf.Margin = new System.Windows.Forms.Padding(2);
-            this.pdf.Name = "pdf";
-            this.pdf.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdf.OcxState")));
-            this.pdf.Size = new System.Drawing.Size(584, 361);
-            this.pdf.TabIndex = 0;
-            this.pdf.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(8, 8);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(23, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 32);
+            this.button1.Size = new System.Drawing.Size(355, 55);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Choose file";
+            this.button1.Text = "Choose a PDF to add to lesson";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // axAcroPDF1
+            // 
+            this.axAcroPDF1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.axAcroPDF1.Enabled = true;
+            this.axAcroPDF1.Location = new System.Drawing.Point(23, 89);
+            this.axAcroPDF1.Name = "axAcroPDF1";
+            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
+            this.axAcroPDF1.Size = new System.Drawing.Size(355, 456);
+            this.axAcroPDF1.TabIndex = 2;
+            this.axAcroPDF1.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
+            // 
             // PDFView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 361);
+            this.ClientSize = new System.Drawing.Size(477, 557);
+            this.ControlBox = false;
+            this.Controls.Add(this.axAcroPDF1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pdf);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PDFView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = " PDF Viewer";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.pdf)).EndInit();
+            this.Load += new System.EventHandler(this.PDFView_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private AxAcroPDFLib.AxAcroPDF pdf;
         private System.Windows.Forms.Button button1;
+        private AxAcroPDFLib.AxAcroPDF axAcroPDF1;
+       
     }
 }
