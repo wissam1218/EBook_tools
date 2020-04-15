@@ -212,6 +212,9 @@ namespace EBook_tools
         {
             count++;
             System.IO.Directory.CreateDirectory(cdir + "\\Lesson "+count);
+            // Must reset numOfFiles count with every new lesson
+            postTest.numOfFiles = 1;
+            preTest.numOfFiles = 1;
             lesson = "Lesson " + count;
             this.Text = "Class: " + className + " | Total Lessons: " + count+" | Chosen Lesson: " + lesson;
             addToLessonTSMI.Visible = true;
@@ -219,6 +222,11 @@ namespace EBook_tools
             {
                 existingLessonTSMI.Enabled = true;
             }
+        }
+
+        private void mainMenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

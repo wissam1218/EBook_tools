@@ -48,70 +48,62 @@
             this.classTSMI});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(910, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(910, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // classTSMI
             // 
-
             this.classTSMI.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.chooseClassTSMI,
             this.editClassTSMI});
             this.classTSMI.Name = "classTSMI";
-            this.classTSMI.Size = new System.Drawing.Size(75, 20);
+            this.classTSMI.Size = new System.Drawing.Size(112, 29);
             this.classTSMI.Text = "Classroom";
-
+            this.classTSMI.Click += new System.EventHandler(this.classTSMI_Click);
             // 
             // chooseClassTSMI
             // 
-
             this.chooseClassTSMI.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newClassroomTSMI,
             this.existingClassroomTSMI});
             this.chooseClassTSMI.Name = "chooseClassTSMI";
-            this.chooseClassTSMI.Size = new System.Drawing.Size(114, 22);
+            this.chooseClassTSMI.Size = new System.Drawing.Size(270, 34);
             this.chooseClassTSMI.Text = "Choose";
             // 
             // newClassroomTSMI
             // 
-
             this.newClassroomTSMI.Name = "newClassroomTSMI";
-            this.newClassroomTSMI.Size = new System.Drawing.Size(115, 22);
+            this.newClassroomTSMI.Size = new System.Drawing.Size(174, 34);
             this.newClassroomTSMI.Text = "New";
             this.newClassroomTSMI.Click += new System.EventHandler(this.newClassroomTSMI_Click);
-
             // 
             // existingClassroomTSMI
             // 
-
             this.existingClassroomTSMI.Name = "existingClassroomTSMI";
-            this.existingClassroomTSMI.Size = new System.Drawing.Size(115, 22);
+            this.existingClassroomTSMI.Size = new System.Drawing.Size(174, 34);
             this.existingClassroomTSMI.Text = "Existing";
             this.existingClassroomTSMI.Click += new System.EventHandler(this.existingClassroomTSMI_Click);
-
             // 
             // editClassTSMI
             // 
-
             this.editClassTSMI.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editStudentTSMI,
             this.editCurriculumTSMI});
             this.editClassTSMI.Name = "editClassTSMI";
-            this.editClassTSMI.Size = new System.Drawing.Size(114, 22);
+            this.editClassTSMI.Size = new System.Drawing.Size(270, 34);
             this.editClassTSMI.Text = "Edit";
-
             // 
             // editStudentTSMI
             // 
             this.editStudentTSMI.Name = "editStudentTSMI";
-            this.editStudentTSMI.Size = new System.Drawing.Size(134, 22);
+            this.editStudentTSMI.Size = new System.Drawing.Size(199, 34);
             this.editStudentTSMI.Text = "Student";
             // 
             // editCurriculumTSMI
             // 
             this.editCurriculumTSMI.Name = "editCurriculumTSMI";
-            this.editCurriculumTSMI.Size = new System.Drawing.Size(134, 22);
+            this.editCurriculumTSMI.Size = new System.Drawing.Size(199, 34);
             this.editCurriculumTSMI.Text = "Curriculum";
             this.editCurriculumTSMI.Click += new System.EventHandler(this.editClassTSMI_Click);
             // 
@@ -123,10 +115,8 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
-
             this.Name = "MainPageform";
             this.Text = "Welcome! Current Selected Class: None";
-
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

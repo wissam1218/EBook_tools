@@ -20,8 +20,9 @@ namespace EBook_tools
 
         public PDFView()
         {
-            InitializeComponent();
 
+            InitializeComponent();
+            WindowState = FormWindowState.Maximized;
         }
 
 
@@ -55,7 +56,8 @@ namespace EBook_tools
 
         private void PDFView_Load(object sender, EventArgs e)
         {
-
+            
         }
+
     }
 }

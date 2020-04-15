@@ -109,5 +109,10 @@ namespace EBook_tools
                 existingClassroomTSMI.Enabled = true;
             }
         }
+
+        private void classTSMI_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
