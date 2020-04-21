@@ -110,7 +110,9 @@ namespace EBook_tools
             }
         }
 
-        private void classTSMI_Click(object sender, EventArgs e)
+
+        private void MainPageform_Load(object sender, EventArgs e)
+
         {
 
         }

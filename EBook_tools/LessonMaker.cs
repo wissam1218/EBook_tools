@@ -25,13 +25,21 @@ namespace EBook_tools
 
         private void OpeningPage_Load(object sender, EventArgs e)
         {
-            count = System.IO.Directory.GetDirectories(cdir).Length;
-            this.Text += count;
-            addToLessonTSMI.Visible = false;
-            if(count == 0)
+            try
             {
-                existingLessonTSMI.Enabled = false;
+                count = System.IO.Directory.GetDirectories(cdir).Length;
+                this.Text += count;
+                addToLessonTSMI.Visible = false;
+                if (count == 0)
+                {
+                    existingLessonTSMI.Enabled = false;
+                }
             }
+            catch (Exception f)
+            {
+                Console.WriteLine(f.Message);
+            }
+            
         }
 
         preTest pret;
