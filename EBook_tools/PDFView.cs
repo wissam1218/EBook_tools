@@ -1,8 +1,10 @@
-﻿using System;
+﻿using iTextSharp.text.pdf.parser;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,9 +16,37 @@ namespace EBook_tools
     {
         string cdir;
         string lesson;
+        private StreamWriter tw;
+
         public PDFView()
         {
+
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.CheckFileExists = true;
+            ofd.AddExtension = true;
+            ofd.Multiselect = true;
+            ofd.Filter = "PDF files (*.pdf)|*.pdf";
+            if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                axAcroPDF1.src = ofd.FileName;
+                String pdfFile = ofd.FileName;
+                // If more than one pdf is loaded into a lesson the program will crash
+                File.Copy(pdfFile, cdir+"\\pdf_for_lesson.pdf");
+                
+
+            }
+        }
+        public void changeDir(string newDir, string newLesson)
+        {
+            cdir = newDir;
+            lesson = newLesson;
         }
 
         private void axAcroPDF1_Enter(object sender, EventArgs e)
@@ -24,23 +54,10 @@ namespace EBook_tools
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void PDFView_Load(object sender, EventArgs e)
         {
-            OpenFileDialog open = new OpenFileDialog();
-            // set a filter
-            open.Filter = "(*.pdf) |*.pdf;";
-            open.ShowDialog();
-            if (open.FileName != null)
-            {
-                // load
-                pdf.LoadFile(open.FileName);
-            }
+            
+        }
 
-        }
-        public void changeDir(string newDir, string newLesson)
-        {
-            cdir = newDir;
-            lesson = newLesson;
-        }
     }
 }

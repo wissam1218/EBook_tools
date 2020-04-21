@@ -15,6 +15,7 @@ namespace EBook_tools
         string cdir = null;
         public string className = null;
         string lesson = null;
+        String pdf = null;
         int count = 0;
         String[] environmentArray;
         public LessonMaker()
@@ -219,6 +220,9 @@ namespace EBook_tools
         {
             count++;
             System.IO.Directory.CreateDirectory(cdir + "\\Lesson "+count);
+            // Must reset numOfFiles count with every new lesson
+            postTest.numOfFiles = 1;
+            preTest.numOfFiles = 1;
             lesson = "Lesson " + count;
             this.Text = "Class: " + className + " | Total Lessons: " + count+" | Chosen Lesson: " + lesson;
             addToLessonTSMI.Visible = true;
@@ -226,6 +230,11 @@ namespace EBook_tools
             {
                 existingLessonTSMI.Enabled = true;
             }
+        }
+
+        private void mainMenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

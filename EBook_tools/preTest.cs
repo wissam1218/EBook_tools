@@ -80,5 +80,10 @@ namespace EBook_tools
             cdir = newDir;
             lesson = newLesson;
         }
+
+        private void qBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

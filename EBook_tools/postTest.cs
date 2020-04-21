@@ -13,13 +13,14 @@ namespace EBook_tools
 {
     public partial class postTest : Form
     {
-        string cdir;
         string lesson;
+        string cdir;
         public static int numOfFiles = 1;
         public static int count = 1;
 
         TextWriter tw;
 
+        // Initializ txt in text boxes 
         public postTest()
         {
             InitializeComponent();
@@ -31,13 +32,11 @@ namespace EBook_tools
             ansBox.Text = "Answer";
             
         }
-        // adds the queestion set to the file aand clear for new text
+        // Add queestion set to the file aand clear for new text
         public void addBtn_Click(object sender, EventArgs e)
         {
 
             tw = new StreamWriter(cdir + "\\postTest" + numOfFiles + ".txt", true);
-            // tw.WriteLine("Question #" + count);
-
             tw.WriteLine("$"+this.qBox.Text+">");
             tw.WriteLine("&"+this.aBox.Text);
             tw.WriteLine("!"+this.bBox.Text);
@@ -83,5 +82,9 @@ namespace EBook_tools
             lesson = newLesson;
         }
 
+        private void qBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
