@@ -38,9 +38,10 @@
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(27, 12);
+            this.button1.Location = new System.Drawing.Point(18, 8);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(638, 59);
+            this.button1.Size = new System.Drawing.Size(425, 38);
             this.button1.TabIndex = 1;
             this.button1.Text = "Choose a PDF to add to lesson";
             this.button1.UseVisualStyleBackColor = true;
@@ -52,26 +53,27 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.axAcroPDF1.Enabled = true;
-            this.axAcroPDF1.Location = new System.Drawing.Point(27,100);
+            this.axAcroPDF1.Location = new System.Drawing.Point(18, 100);
+            this.axAcroPDF1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.axAcroPDF1.Name = "axAcroPDF1";
             this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(638,474);
+            this.axAcroPDF1.Size = new System.Drawing.Size(425, 474);
             this.axAcroPDF1.TabIndex = 2;
             this.axAcroPDF1.Enter += new System.EventHandler(this.axAcroPDF1_Enter);
             // 
             // PDFView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(693, 605);
+            this.ClientSize = new System.Drawing.Size(462, 393);
             this.Controls.Add(this.axAcroPDF1);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PDFView";
