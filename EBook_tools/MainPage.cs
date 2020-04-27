@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.IO.Compression;
 using System.Windows.Forms;
 
@@ -117,7 +118,17 @@ namespace EBook_tools
             string startPath = cdir+"\\"+className;
             string zipPath = cdir + "\\" + className+".zip";
             //string extractPath = @".\extract";
-            ZipFile.CreateFromDirectory(startPath, zipPath);
+            try
+            {
+                ZipFile.CreateFromDirectory(startPath, zipPath);
+            }
+            catch
+            {
+                //File already created
+                //Delete old instance and overwrite.
+                File.Delete(zipPath);
+                ZipFile.CreateFromDirectory(startPath, zipPath);
+            }
         }
     }
 }
