@@ -37,9 +37,19 @@ namespace EBook_tools
             {
                 axAcroPDF1.src = ofd.FileName;
                 String pdfFile = ofd.FileName;
-                // If more than one pdf is loaded into a lesson the program will crash
-                File.Copy(pdfFile, cdir+"\\pdf_for_lesson.pdf");
-                
+                try
+                {
+                    File.Copy(pdfFile, cdir + "\\pdf_for_lesson.pdf");
+                }
+                catch
+                {
+                    File.Delete(cdir + "\\pdf_for_lesson.pdf");
+                    File.Copy(pdfFile, cdir + "\\pdf_for_lesson.pdf");
+                }
+                //Code below is to use multiple pdfs with their original names
+                //String[] filePath = pdfFile.Split('\\');
+                //File.Copy(pdfFile, cdir + "\\" + filePath[filePath.Length-1]);
+
 
             }
         }

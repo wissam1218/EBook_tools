@@ -39,7 +39,7 @@
             this.openBtn.Location = new System.Drawing.Point(8, 8);
             this.openBtn.Margin = new System.Windows.Forms.Padding(2);
             this.openBtn.Name = "openBtn";
-            this.openBtn.Size = new System.Drawing.Size(97, 27);
+            this.openBtn.Size = new System.Drawing.Size(127, 27);
             this.openBtn.TabIndex = 2;
             this.openBtn.Text = "&Open File";
             this.openBtn.UseVisualStyleBackColor = false;

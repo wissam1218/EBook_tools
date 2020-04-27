@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO.Compression;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace EBook_tools
 {
@@ -25,13 +17,14 @@ namespace EBook_tools
             cdir = cdir + "\\Classrooms";
             System.IO.Directory.CreateDirectory(cdir);
             editClassTSMI.Visible = false;
+            exportClassTSMI.Visible = false;
             if(System.IO.Directory.GetDirectories(cdir).Length==0)
             {
                 existingClassroomTSMI.Enabled = false;
             }
         }
 
-
+        
         LessonMaker lm;
         private void editClassTSMI_Click(object sender, EventArgs e)
         {
@@ -85,6 +78,7 @@ namespace EBook_tools
                 {
                     this.Text = "Current Selected Class: " + className;
                     editClassTSMI.Visible = true;
+                    exportClassTSMI.Visible = true;
                 }
             }
         }
@@ -108,6 +102,7 @@ namespace EBook_tools
             {
                 existingClassroomTSMI.Enabled = true;
             }
+            exportClassTSMI.Visible = true;
         }
 
 
@@ -115,6 +110,14 @@ namespace EBook_tools
 
         {
 
+        }
+
+        private void exportClassTSMI_Click(object sender, EventArgs e)
+        {
+            string startPath = cdir+"\\"+className;
+            string zipPath = cdir + "\\" + className+".zip";
+            //string extractPath = @".\extract";
+            ZipFile.CreateFromDirectory(startPath, zipPath);
         }
     }
 }

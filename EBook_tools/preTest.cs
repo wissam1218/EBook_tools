@@ -57,7 +57,7 @@ namespace EBook_tools
             aBox.Text = "Choice";
             bBox.Text = "Choice";
             cBox.Text = "Choice";
-            dBox.Text = "Answer";
+            dBox.Text = "Choice";
             ansBox.Text = "Answer";
             count++;
             // qLbl.Text = "Question #" + count;
@@ -66,14 +66,12 @@ namespace EBook_tools
 
         private void buildBtn_Click(object sender, EventArgs e)
         {
-            tw.Close();
             this.Close();
         }
         private void preTest_FormClosed(object sender, FormClosedEventArgs e)
         {
             count = 1;
             numOfFiles++;
-            tw.Close();
         }
         public void changeDir(string newDir, string newLesson)
         {

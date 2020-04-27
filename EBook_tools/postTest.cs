@@ -28,7 +28,7 @@ namespace EBook_tools
             aBox.Text = "Choice";
             bBox.Text = "Choice";
             cBox.Text = "Choice";
-            dBox.Text = "Answer";
+            dBox.Text = "Choice";
             ansBox.Text = "Answer";
             
         }
@@ -53,7 +53,7 @@ namespace EBook_tools
             aBox.Text = "Choice";
             bBox.Text = "Choice";
             cBox.Text = "Choice";
-            dBox.Text = "Answer";
+            dBox.Text = "Choice";
             ansBox.Text = "Answer";
             count++;
 
